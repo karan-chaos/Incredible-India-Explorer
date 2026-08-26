@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Spices & Spice Route Explorer | Incredible India</title>
+    <meta name="description" content="Explore India's legendary spices — their origins, heat levels, flavour profiles, and the ancient spice routes that connected India to the world.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../pages-common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="spice-page-body" data-page="spices">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">🇮🇳 Incredible India</a>
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../frontend/tribes/tribes.html" class="nav-link">Tribes</a></li>
+                <li><a href="../frontend/coin/coin.html" class="nav-link">Currency</a></li>
+                <li><a href="../frontend/rivers/rivers.html" class="nav-link">Rivers</a></li>
+                <li><a href="index.html" class="nav-link active">Spices</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="spc-hero">
+        <div class="spc-hero-bg">
+            <img src="../assets/spice-hero.jpg" alt="" loading="eager">
+        </div>
+        <div class="spc-hero-overlay"></div>
+        <div class="spc-hero-inner">
+            <div class="spc-hero-content">
+                <span class="spc-eyebrow">Culinary Heritage</span>
+                <h1>Indian Spices &<br>Spice Route</h1>
+                <div class="spc-divider"><span>🌶</span></div>
+                <p>India has been the world's spice capital for over 7,000 years. From the fiery bhut jolokia of Assam to the delicate saffron of Kashmir, these aromatic treasures shaped global trade, exploration, and empires.</p>
+            </div>
+            <div class="spc-hero-stats">
+                <div class="spc-stat-card">
+                    <span class="spc-stat-number">75+</span>
+                    <span class="spc-stat-label">Spice Varieties Grown</span>
+                </div>
+                <div class="spc-stat-card">
+                    <span class="spc-stat-number">1/4</span>
+                    <span class="spc-stat-label">World Spice Production</span>
+                </div>
+                <div class="spc-stat-card">
+                    <span class="spc-stat-number">7000</span>
+                    <span class="spc-stat-label">Years of Spice Trading</span>
+                </div>
+                <div class="spc-stat-card">
+                    <span class="spc-stat-number">2nd</span>
+                    <span class="spc-stat-label">Largest Spice Exporter</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTER SECTION ========== -->
+    <section class="spc-filter-section">
+        <div class="section-container">
+            <div class="spc-filter-bar">
+                <div class="spc-search-box">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="spc-search-input" placeholder="Search spices, regions, or uses...">
+                </div>
+                <div class="spc-filter-tabs" id="spc-category-tabs">
+                    <button class="spc-filter-btn active" data-category="all">All</button>
+                    <button class="spc-filter-btn" data-category="seed">🫘 Seeds</button>
+                    <button class="spc-filter-btn" data-category="bark">🪵 Barks</button>
+                    <button class="spc-filter-btn" data-category="fruit">🍓 Fruits</button>
+                    <button class="spc-filter-btn" data-category="root">🌱 Roots</button>
+                    <button class="spc-filter-btn" data-category="flower">🌸 Flowers</button>
+                    <button class="spc-filter-btn" data-category="leaf">🍃 Leaves</button>
+                </div>
+                <div class="spc-select-wrap">
+                    <select id="spc-heat-select">
+                        <option value="all">All Heat Levels</option>
+                        <option value="none">None (0)</option>
+                        <option value="mild">Mild (1-3)</option>
+                        <option value="medium">Medium (4-6)</option>
+                        <option value="hot">Hot (7-9)</option>
+                        <option value="extreme">Extreme (10)</option>
+                    </select>
+                </div>
+                <div class="spc-select-wrap">
+                    <select id="spc-region-select">
+                        <option value="all">All Regions</option>
+                    </select>
+                </div>
+                <button class="spc-reset-btn" id="spc-reset-btn">
+                    <span class="reset-icon"><i class="fa-solid fa-rotate-left"></i></span> Reset
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SPICE CARDS GRID ========== -->
+    <section class="spc-grid-section">
+        <div class="section-container">
+            <div class="spc-communities-header">
+                <span class="tribes-section-label">Explore Spices</span>
+                <div class="tribes-sort-wrap">
+                    <span>Showing <strong id="spc-count">0</strong> spices</span>
+                    <select id="spc-sort-select">
+                        <option value="popular">Popularity</option>
+                        <option value="az">A → Z</option>
+                        <option value="heat">By Heat</option>
+                        <option value="price">By Value</option>
+                    </select>
+                </div>
+            </div>
+            <div class="spc-cards-grid" id="spc-cards-grid">
+                <!-- Rendered by JS -->
+            </div>
+            <div class="spc-no-results" id="spc-no-results" style="display:none;">
+                <i class="fa-solid fa-pepper-hot" style="font-size: 2rem; color: var(--primary-gold); margin-bottom: 12px;"></i>
+                <p>No spices match your filters. Try resetting them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SPICE ROUTE INFO SECTION ========== -->
+    <section class="spc-route-section">
+        <div class="section-container">
+            <div class="spc-route-card">
+                <div class="spc-route-content">
+                    <span class="tribes-section-label">The Spice Route</span>
+                    <h2 class="spc-route-title">How Indian Spices Changed the World</h2>
+                    <p class="spc-route-text">For millennia, Indian spices flowed westward through the Spice Route — a network of ancient sea and land routes connecting the Malabar Coast to Rome, Arabia, Southeast Asia, and China. Pepper was so valuable it was called "black gold." The quest for direct access to India's spices launched the Age of Exploration, led Vasco da Gama to Calicut in 1498, and ultimately shaped the modern world map.</p>
+                    <div class="spc-route-facts">
+                        <div class="spc-route-fact">
+                            <span class="spc-fact-icon">🪙</span>
+                            <div>
+                                <strong>Pepper Tax</strong>
+                                <p>Roman Empire spent 50 million sesterces annually on Indian pepper alone</p>
+                            </div>
+                        </div>
+                        <div class="spc-route-fact">
+                            <span class="spc-fact-icon">⛵</span>
+                            <div>
+                                <strong>Vasco da Gama</strong>
+                                <p>Reached Calicut in 1498,开启 European spice trade monopoly</p>
+                            </div>
+                        </div>
+                        <div class="spc-route-fact">
+                            <span class="spc-fact-icon">💰</span>
+                            <div>
+                                <strong>Black Gold</strong>
+                                <p>Pepper was used as currency, dowry, and even rent payment in medieval Europe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUOTE SECTION ========== -->
+    <section class="tribes-quote-section">
+        <p class="tribes-quote">
+            <span class="quote-mark">"</span>He that would live in peace and ease, Must not take all that he doth please<span class="quote-mark">"</span>
+            <br><small style="color: var(--text-muted); font-size: 0.85rem; font-style: normal;">— Proverb from the Indian spice markets of Kerala</small>
+        </p>
+        <div class="tribes-divider tribes-divider-quote"><span>🌶</span></div>
+    </section>
+
+    <!-- ========== DETAIL MODAL ========== -->
+    <div class="spc-modal-backdrop" id="spc-modal-backdrop"></div>
+    <div class="spc-detail-panel" id="spc-detail-panel">
+        <!-- Rendered by JS -->
+    </div>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <button id="btn-scroll-top" class="btn-scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="../pages-common.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

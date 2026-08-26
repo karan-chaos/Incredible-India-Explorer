@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Classical Dances Explorer | Incredible India</title>
+    <meta name="description" content="Explore the eight classical dance forms of India — their origins, costumes, mudras, and cultural significance across every region.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../pages-common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="dances-page-body" data-page="dances">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">🇮🇳 Incredible India</a>
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../frontend/tribes/tribes.html" class="nav-link">Tribes</a></li>
+                <li><a href="../frontend/coin/coin.html" class="nav-link">Currency</a></li>
+                <li><a href="../frontend/rivers/rivers.html" class="nav-link">Rivers</a></li>
+                <li><a href="index.html" class="nav-link active">Dances</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="dances-hero">
+        <div class="dances-hero-bg">
+            <img src="../assets/dances-hero.jpg" alt="" loading="eager">
+        </div>
+        <div class="dances-hero-overlay"></div>
+        <div class="dances-hero-inner">
+            <div class="dances-hero-content">
+                <span class="dances-eyebrow">Cultural Heritage</span>
+                <h1>Indian Classical Dances</h1>
+                <div class="dances-divider"><span>✦</span></div>
+                <p>India's classical dances are living repositories of mythology, devotion and millennia-old artistic traditions. Each form tells stories through codified hand gestures, facial expressions and rhythmic footwork perfected over centuries.</p>
+            </div>
+            <div class="dances-hero-stats">
+                <div class="dances-stat-card">
+                    <span class="dances-stat-number">8</span>
+                    <span class="dances-stat-label">Sangeet Natak Akademi Recognised Dances</span>
+                </div>
+                <div class="dances-stat-card">
+                    <span class="dances-stat-number">28+</span>
+                    <span class="dances-stat-label">Mudras in Bharatanatyam alone</span>
+                </div>
+                <div class="dances-stat-card">
+                    <span class="dances-stat-number">2000+</span>
+                    <span class="dances-stat-label">Years of documented history</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTER SECTION ========== -->
+    <section class="dances-filter-section">
+        <div class="section-container">
+            <div class="dances-filter-bar">
+                <div class="dances-search-box">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="dances-search-input" placeholder="Search by name, state, or gesture...">
+                </div>
+                <div class="dances-select-wrap">
+                    <select id="dances-region-select">
+                        <option value="all">All Regions</option>
+                        <option value="south">South India</option>
+                        <option value="north">North India</option>
+                        <option value="east">East India</option>
+                        <option value="northeast">Northeast India</option>
+                        <option value="west">West India</option>
+                        <option value="central">Central India</option>
+                    </select>
+                </div>
+                <div class="dances-select-wrap">
+                    <select id="dances-style-select">
+                        <option value="all">All Styles</option>
+                        <option value="nritta">Nritta (Pure Dance)</option>
+                        <option value="nritya">Nritya (Expressive)</option>
+                        <option value="natya">Natya (Dramatic)</option>
+                    </select>
+                </div>
+                <button class="dances-reset-btn" id="dances-reset-btn">
+                    <span class="reset-icon"><i class="fa-solid fa-rotate-left"></i></span> Reset
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DANCE CARDS GRID ========== -->
+    <section class="dances-grid-section">
+        <div class="section-container">
+            <div class="dances-communities-header">
+                <span class="tribes-section-label">Explore Dance Forms</span>
+                <div class="tribes-sort-wrap">
+                    <span>Sort by:</span>
+                    <select id="dances-sort-select">
+                        <option value="popular">Popularity</option>
+                        <option value="az">A → Z</option>
+                        <option value="age">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+            <div class="dances-cards-grid" id="dances-cards-grid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUOTE SECTION ========== -->
+    <section class="tribes-quote-section">
+        <p class="tribes-quote">
+            <span class="quote-mark">"</span>Dance is the hidden language of the soul<span class="quote-mark">"</span>
+            <br><small style="color: var(--text-muted); font-size: 0.85rem; font-style: normal;">— Martha Graham (on the universality of Indian classical dance)</small>
+        </p>
+        <div class="tribes-divider tribes-divider-quote"><span>✦</span></div>
+    </section>
+
+    <!-- ========== DETAIL MODAL ========== -->
+    <div class="dances-modal-backdrop" id="dances-modal-backdrop"></div>
+    <div class="dances-detail-panel" id="dances-detail-panel">
+        <!-- Rendered by JS -->
+    </div>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <button id="btn-scroll-top" class="btn-scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="../pages-common.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

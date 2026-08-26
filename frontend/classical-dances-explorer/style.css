@@ -1,0 +1,793 @@
+/* ==========================================================================
+   CLASSICAL DANCES EXPLORER — PAGE SPECIFIC STYLES
+   Uses global variables/reset/navbar/footer from styles.css via pages-common.css.
+   ========================================================================== */
+
+body.dances-page-body {
+    background: var(--bg-dark-deep);
+}
+
+.dances-page-body .section-container {
+    padding: 50px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.dances-hero {
+    position: relative;
+    width: 100%;
+    min-height: 580px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.dances-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.dances-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% center;
+}
+
+.dances-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg,
+            hsl(340, 40%, 6%) 0%,
+            hsla(340, 40%, 6%, 0.93) 30%,
+            hsla(340, 30%, 8%, 0.55) 55%,
+            hsla(340, 25%, 10%, 0.25) 75%,
+            hsla(340, 30%, 8%, 0.35) 100%);
+}
+
+.dances-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 40px 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.dances-hero-content {
+    max-width: 620px;
+}
+
+.dances-eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.dances-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.4rem;
+    line-height: 1.15;
+    color: var(--text-light);
+    font-weight: 700;
+    margin: 0;
+}
+
+.dances-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.dances-divider::before,
+.dances-divider::after {
+    content: "";
+    height: 1px;
+    width: 50px;
+    background: linear-gradient(90deg, var(--primary-gold), transparent);
+}
+
+.dances-divider span {
+    color: var(--primary-gold);
+    font-size: 0.85rem;
+}
+
+.dances-hero-content p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    max-width: 500px;
+}
+
+/* Hero stats cards */
+.dances-hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-shrink: 0;
+    padding-top: 30px;
+}
+
+.dances-stat-card {
+    background: rgba(255, 176, 31, 0.06);
+    border: 1px solid rgba(255, 176, 31, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: 20px 28px;
+    min-width: 220px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dances-stat-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-gold);
+    line-height: 1;
+}
+
+.dances-stat-label {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   2. FILTER / SEARCH BAR
+   ========================================================================== */
+.dances-filter-section .section-container {
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.dances-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255, 176, 31, 0.18);
+    border-radius: 999px;
+    padding: 10px 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-soft);
+    flex-wrap: wrap;
+}
+
+.dances-search-box {
+    flex: 1 1 280px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: hsla(222, 40%, 10%, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    padding: 10px 18px;
+}
+
+.dances-search-box .search-icon {
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.dances-search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+}
+
+.dances-search-box input::placeholder {
+    color: var(--text-muted);
+}
+
+.dances-select-wrap select {
+    appearance: none;
+    background: hsla(222, 40%, 10%, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    padding: 10px 34px 10px 16px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1L5 5L9 1' stroke='%23FFB01F' stroke-width='1.4' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    transition: var(--transition-snappy);
+}
+
+.dances-select-wrap select:hover,
+.dances-select-wrap select:focus {
+    border-color: var(--primary-gold);
+    outline: none;
+}
+
+.dances-select-wrap select option {
+    background: var(--bg-dark-modal);
+    color: var(--text-light);
+}
+
+.dances-reset-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid rgba(255, 176, 31, 0.3);
+    color: var(--primary-gold);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: var(--transition-snappy);
+    white-space: nowrap;
+}
+
+.dances-reset-btn:hover {
+    background: rgba(255, 176, 31, 0.12);
+    border-color: var(--primary-gold);
+}
+
+.reset-icon {
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   3. DANCE CARDS GRID
+   ========================================================================== */
+.dances-grid-section .section-container {
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.dances-communities-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.dances-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.dance-card {
+    position: relative;
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255, 176, 31, 0.3);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    animation: danceCardFadeIn 0.5s ease both;
+}
+
+.dance-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-gold);
+    box-shadow: var(--shadow-glow-active);
+}
+
+@keyframes danceCardFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dance-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.dance-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.dance-card:hover .dance-card-img-wrap img {
+    transform: scale(1.06);
+}
+
+.dance-card-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, hsla(222, 47%, 4%, 0.9) 100%);
+    pointer-events: none;
+}
+
+.dance-card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 999px;
+}
+
+.dance-card-badge.region-south { background: hsl(340, 65%, 42%); }
+.dance-card-badge.region-north { background: hsl(205, 75%, 48%); }
+.dance-card-badge.region-east { background: hsl(142, 55%, 36%); }
+.dance-card-badge.region-northeast { background: hsl(28, 85%, 48%); }
+.dance-card-badge.region-west { background: hsl(265, 50%, 52%); }
+.dance-card-badge.region-central { background: hsl(35, 80%, 48%); }
+
+.dance-card-title {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 12px hsla(222, 47%, 2%, 0.8);
+}
+
+.dance-card-fav {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: hsla(222, 47%, 6%, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--text-light);
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-snappy);
+}
+
+.dance-card-fav:hover,
+.dance-card-fav.active {
+    color: var(--primary-saffron);
+    background: hsla(222, 47%, 6%, 0.9);
+}
+
+.dance-card-body {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.dance-card-desc {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    flex: 1;
+}
+
+.dance-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dance-card-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.dance-card-meta-item i {
+    color: var(--primary-gold);
+    font-size: 0.8rem;
+}
+
+.dance-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.dance-tag {
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 176, 31, 0.3);
+    color: var(--primary-gold);
+    background: rgba(255, 176, 31, 0.06);
+}
+
+.dance-no-results {
+    grid-column: 1 / -1;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   4. DETAIL MODAL
+   ========================================================================== */
+.dances-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: hsla(340, 30%, 5%, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.dances-modal-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dances-detail-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -46%);
+    width: min(960px, 94vw);
+    max-height: 88vh;
+    overflow-y: auto;
+    background: var(--bg-dark-card);
+    border: 1px solid var(--primary-gold);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 25px 70px hsla(340, 30%, 2%, 0.6), var(--shadow-glow-active);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dances-detail-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+}
+
+.dances-detail-hero {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.dances-detail-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dances-detail-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, var(--bg-dark-card) 100%);
+}
+
+.dances-detail-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: hsla(0, 0%, 0%, 0.4);
+    backdrop-filter: blur(6px);
+    color: var(--text-light);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-snappy);
+    z-index: 3;
+}
+
+.dances-detail-close:hover {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.dances-detail-body {
+    padding: 0 36px 36px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+}
+
+.dances-detail-name {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 0 0 8px;
+}
+
+.dances-detail-origin {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--primary-gold);
+    margin-bottom: 16px;
+}
+
+.dances-detail-desc {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+/* Stats row */
+.dances-detail-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 24px;
+}
+
+.dances-detail-stat {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.dances-detail-stat .stat-icon {
+    font-size: 1rem;
+    color: var(--primary-gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.dances-detail-stat-label {
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+.dances-detail-stat-value {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    color: var(--text-light);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* Tabs */
+.dances-detail-tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.dances-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 4px 2px 12px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition-snappy);
+    white-space: nowrap;
+}
+
+.dances-tab-btn:hover {
+    color: var(--text-light);
+}
+
+.dances-tab-btn.active {
+    color: var(--primary-saffron);
+    border-bottom-color: var(--primary-saffron);
+}
+
+.dances-tab-panel {
+    display: none;
+}
+
+.dances-tab-panel.active {
+    display: block;
+}
+
+.dances-tab-text {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.dances-tab-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dances-tab-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.dances-tab-list li .check-icon {
+    color: var(--primary-green);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* Mudra showcase */
+.dances-mudra-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.dances-mudra-item {
+    background: hsla(222, 40%, 10%, 0.5);
+    border: 1px solid rgba(255, 176, 31, 0.15);
+    border-radius: var(--border-radius-sm);
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.dances-mudra-icon {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.dances-mudra-name {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 2px;
+}
+
+.dances-mudra-meaning {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   5. RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .dances-hero-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .dances-hero-stats {
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .dances-hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+    .dances-detail-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .dances-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dances-detail-hero {
+        height: 240px;
+    }
+
+    .dances-detail-body {
+        padding: 0 24px 24px;
+    }
+
+    .dances-detail-name {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .dances-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dances-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dances-hero-stats {
+        flex-direction: column;
+    }
+
+    .dances-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .dances-detail-hero {
+        height: 200px;
+    }
+
+    .dances-detail-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dances-mudra-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

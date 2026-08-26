@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Traditional Games Explorer | Incredible India</title>
+    <meta name="description" content="Explore India's rich heritage of traditional board games, folk sports, and ancient strategic games — from Chaturanga (Chess) to Kabaddi, Carrom to Gilli-danda.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../pages-common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="games-page-body" data-page="games">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">🇮🇳 Incredible India</a>
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../frontend/tribes/tribes.html" class="nav-link">Tribes</a></li>
+                <li><a href="../frontend/coin/coin.html" class="nav-link">Currency</a></li>
+                <li><a href="../frontend/rivers/rivers.html" class="nav-link">Rivers</a></li>
+                <li><a href="index.html" class="nav-link active">Games</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="gam-hero">
+        <div class="gam-hero-bg">
+            <img src="../assets/games-hero.jpg" alt="" loading="eager">
+        </div>
+        <div class="gam-hero-overlay"></div>
+        <div class="gam-hero-inner">
+            <div class="gam-hero-content">
+                <span class="gam-eyebrow">Gaming Heritage</span>
+                <h1>Traditional Games<br>of India</h1>
+                <div class="gam-divider"><span>♟️</span></div>
+                <p>India is the birthplace of chess, ludo, carrom, and dozens of other games that the world plays today. These ancient games of strategy, skill, and community have been passed down through millennia of village squares, royal courts, and festival grounds.</p>
+            </div>
+            <div class="gam-hero-stats">
+                <div class="gam-stat-card">
+                    <span class="gam-stat-number">50+</span>
+                    <span class="gam-stat-label">Traditional Games Documented</span>
+                </div>
+                <div class="gam-stat-card">
+                    <span class="gam-stat-number">4000</span>
+                    <span class="gam-stat-label">Years of Board Game History</span>
+                </div>
+                <div class="gam-stat-card">
+                    <span class="gam-stat-number">3</span>
+                    <span class="gam-stat-label">Games Globalised from India</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTER SECTION ========== -->
+    <section class="gam-filter-section">
+        <div class="section-container">
+            <div class="gam-filter-bar">
+                <div class="gam-search-box">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="gam-search-input" placeholder="Search games, origins, or regions...">
+                </div>
+                <div class="gam-filter-tabs" id="gam-type-tabs">
+                    <button class="gam-filter-btn active" data-type="all">All</button>
+                    <button class="gam-filter-btn" data-type="board">🎯 Board</button>
+                    <button class="gam-filter-btn" data-type="outdoor">🏃 Outdoor</button>
+                    <button class="gam-filter-btn" data-type="dice">🎲 Dice</button>
+                    <button class="gam-filter-btn" data-type="martial">🥋 Martial</button>
+                    <button class="gam-filter-btn" data-type="dexterity">🪀 Dexterity</button>
+                </div>
+                <div class="gam-select-wrap">
+                    <select id="gam-region-select">
+                        <option value="all">All Regions</option>
+                    </select>
+                </div>
+                <button class="gam-reset-btn" id="gam-reset-btn">
+                    <span class="reset-icon"><i class="fa-solid fa-rotate-left"></i></span> Reset
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GAME CARDS GRID ========== -->
+    <section class="gam-grid-section">
+        <div class="section-container">
+            <div class="gam-communities-header">
+                <span class="tribes-section-label">Explore Games</span>
+                <div class="tribes-sort-wrap">
+                    <span>Showing <strong id="gam-count">0</strong> games</span>
+                    <select id="gam-sort-select">
+                        <option value="popular">Popularity</option>
+                        <option value="az">A → Z</option>
+                        <option value="age">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+            <div class="gam-cards-grid" id="gam-cards-grid">
+                <!-- Rendered by JS -->
+            </div>
+            <div class="gam-no-results" id="gam-no-results" style="display:none;">
+                <i class="fa-solid fa-chess-knight" style="font-size: 2rem; color: var(--primary-gold); margin-bottom: 12px;"></i>
+                <p>No games match your filters. Try resetting them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEGACY SECTION ========== -->
+    <section class="gam-legacy-section">
+        <div class="section-container">
+            <div class="gam-legacy-card">
+                <div class="gam-legacy-content">
+                    <span class="tribes-section-label">India's Gaming Legacy</span>
+                    <h2 class="gam-legacy-title">Games That Conquered the World</h2>
+                    <p class="gam-legacy-text">India is the undisputed birthplace of the world's most popular strategy and race games. Chaturanga became Chess. Pachisi became Ludo. Pallankuzhi influenced Mancala. Gilli-danda inspired Cricket and Baseball. The games born in Indian villages and royal courts now entertain billions worldwide.</p>
+                    <div class="gam-legacy-grid">
+                        <div class="gam-legacy-item">
+                            <span class="gam-legacy-emoji">♟️</span>
+                            <div>
+                                <strong>Chaturanga → Chess</strong>
+                                <p>6th century CE, Gupta Empire. The "four divisions" of the army gave us the world's most popular strategy game.</p>
+                            </div>
+                        </div>
+                        <div class="gam-legacy-item">
+                            <span class="gam-legacy-emoji">🎲</span>
+                            <div>
+                                <strong>Pachisi → Ludo</strong>
+                                <p>4th century CE. Mughal emperors played on marble courts at Fatehpur Sikri. Now played in every household globally.</p>
+                            </div>
+                        </div>
+                        <div class="gam-legacy-item">
+                            <span class="gam-legacy-emoji">🏏</span>
+                            <div>
+                                <strong>Gilli-danda → Cricket</strong>
+                                <p>Ancient village game. The principles of bat-and-ball play originated here before British colonial adaptation.</p>
+                            </div>
+                        </div>
+                        <div class="gam-legacy-item">
+                            <span class="gam-legacy-emoji">🏁</span>
+                            <div>
+                                <strong>Pallankuzhi → Mancala</strong>
+                                <p>Over 2,000 years old. This pit-and-seed counting game spread from South India across Africa and the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUOTE SECTION ========== -->
+    <section class="tribes-quote-section">
+        <p class="tribes-quote">
+            <span class="quote-mark">"</span>The game of chess is not merely an idle amusement. Several very valuable qualities of the mind, useful in the course of human life, are to be acquired or strengthened by it<span class="quote-mark">"</span>
+            <br><small style="color: var(--text-muted); font-size: 0.85rem; font-style: normal;">— Benjamin Franklin (referencing chess, born from Indian Chaturanga)</small>
+        </p>
+        <div class="tribes-divider tribes-divider-quote"><span>♟️</span></div>
+    </section>
+
+    <!-- ========== DETAIL MODAL ========== -->
+    <div class="gam-modal-backdrop" id="gam-modal-backdrop"></div>
+    <div class="gam-detail-panel" id="gam-detail-panel">
+        <!-- Rendered by JS -->
+    </div>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <button id="btn-scroll-top" class="btn-scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="../pages-common.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

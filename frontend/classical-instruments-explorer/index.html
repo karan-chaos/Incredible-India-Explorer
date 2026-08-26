@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Classical Musical Instruments Explorer | Incredible India</title>
+    <meta name="description" content="Explore the classical musical instruments of India — sitar, tabla, veena, sarangi and more. Discover their origins, construction, and musical traditions.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../pages-common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="instruments-page-body" data-page="instruments">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">🇮🇳 Incredible India</a>
+            <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../frontend/tribes/tribes.html" class="nav-link">Tribes</a></li>
+                <li><a href="../frontend/coin/coin.html" class="nav-link">Currency</a></li>
+                <li><a href="../frontend/rivers/rivers.html" class="nav-link">Rivers</a></li>
+                <li><a href="index.html" class="nav-link active">Instruments</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="inst-hero">
+        <div class="inst-hero-bg">
+            <img src="../assets/instruments-hero.jpg" alt="" loading="eager">
+        </div>
+        <div class="inst-hero-overlay"></div>
+        <div class="inst-hero-inner">
+            <div class="inst-hero-content">
+                <span class="inst-eyebrow">Musical Heritage</span>
+                <h1>Classical Musical Instruments</h1>
+                <div class="inst-divider"><span>♪</span></div>
+                <p>India's classical musical instruments span thousands of years of sonic tradition. From the resonant strings of the sitar to the thunderous rhythms of the mridangam, each instrument carries a living heritage of melody, rhythm and devotion.</p>
+            </div>
+            <div class="inst-hero-stats">
+                <div class="inst-stat-card">
+                    <span class="inst-stat-number">4</span>
+                    <span class="inst-stat-label">Instrument Families</span>
+                </div>
+                <div class="inst-stat-card">
+                    <span class="inst-stat-number">100+</span>
+                    <span class="inst-stat-label">Distinct Instruments</span>
+                </div>
+                <div class="inst-stat-card">
+                    <span class="inst-stat-number">3000</span>
+                    <span class="inst-stat-label">Years of Tradition</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTER SECTION ========== -->
+    <section class="inst-filter-section">
+        <div class="section-container">
+            <div class="inst-filter-bar">
+                <div class="inst-search-box">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="inst-search-input" placeholder="Search instruments, regions, or genres...">
+                </div>
+                <div class="inst-filter-tabs" id="inst-family-tabs">
+                    <button class="inst-filter-btn active" data-family="all">All</button>
+                    <button class="inst-filter-btn" data-family="string"><i class="fa-solid fa-guitar"></i> String</button>
+                    <button class="inst-filter-btn" data-family="percussion"><i class="fa-solid fa-drum"></i> Percussion</button>
+                    <button class="inst-filter-btn" data-family="wind"><i class="fa-solid fa-wind"></i> Wind</button>
+                    <button class="inst-filter-btn" data-family="other"><i class="fa-solid fa-music"></i> Other</button>
+                </div>
+                <button class="inst-reset-btn" id="inst-reset-btn">
+                    <span class="reset-icon"><i class="fa-solid fa-rotate-left"></i></span> Reset
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INSTRUMENT CARDS GRID ========== -->
+    <section class="inst-grid-section">
+        <div class="section-container">
+            <div class="inst-communities-header">
+                <span class="tribes-section-label">Explore Instruments</span>
+                <div class="tribes-sort-wrap">
+                    <span>Sort by:</span>
+                    <select id="inst-sort-select">
+                        <option value="popular">Popularity</option>
+                        <option value="az">A → Z</option>
+                        <option value="family">Family</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inst-cards-grid" id="inst-cards-grid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUOTE SECTION ========== -->
+    <section class="tribes-quote-section">
+        <p class="tribes-quote">
+            <span class="quote-mark">"</span>Music is the divine way of telling beautiful, poetic things to the heart<span class="quote-mark">"</span>
+            <br><small style="color: var(--text-muted); font-size: 0.85rem; font-style: normal;">— Pablo Casals (on Indian classical music)</small>
+        </p>
+        <div class="tribes-divider tribes-divider-quote"><span>♪</span></div>
+    </section>
+
+    <!-- ========== DETAIL MODAL ========== -->
+    <div class="inst-modal-backdrop" id="inst-modal-backdrop"></div>
+    <div class="inst-detail-panel" id="inst-detail-panel">
+        <!-- Rendered by JS -->
+    </div>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <button id="btn-scroll-top" class="btn-scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="../pages-common.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

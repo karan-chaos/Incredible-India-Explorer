@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore India's Major River Confluences (Prayags) - Sacred Sangams where holy rivers meet.">
+    <title>River Confluences Explorer | Incredible India Explorer</title>
+    <link rel="preload" href="../../assets/fonts/Outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/Outfit-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/PlayfairDisplay-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="rce-navbar">
+    <a href="../../index.html" class="back-link">&larr; Back to Home</a>
+    <div class="nav-brand">
+        <span class="saffron">Incredible</span>
+        <span class="gold">India</span>
+        <span class="green">Explorer</span>
+    </div>
+    <nav class="rce-nav-links">
+        <a href="#confluences">Confluences</a>
+        <a href="#map-section">Map</a>
+        <a href="#prayags">Prayags</a>
+        <a href="#festivals">Festivals</a>
+        <a href="#scriptures">Scriptures</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="rce-hero" id="rceHero">
+    <div class="rce-hero-bg"><div class="rce-water-particles" id="waterParticles"></div></div>
+    <div class="rce-hero-overlay"></div>
+    <div class="rce-hero-content">
+        <span class="rce-section-badge">🔱 Sacred Confluences</span>
+        <h1 class="rce-hero-title">Major River<br>Confluences of India</h1>
+        <p class="rce-hero-subtitle">
+            Discover the sacred Sangams and Prayags where India's holy rivers merge —
+            powerful sites of spiritual convergence revered for millennia.
+        </p>
+        <div class="rce-hero-stats">
+            <div class="rce-stat-item"><span class="rce-stat-number">5</span><span class="rce-stat-label">Panch Prayag</span></div>
+            <div class="rce-stat-item"><span class="rce-stat-number">12+</span><span class="rce-stat-label">Major Sangams</span></div>
+            <div class="rce-stat-item"><span class="rce-stat-number">100M+</span><span class="rce-stat-label">Annual Pilgrims</span></div>
+        </div>
+        <a href="#confluences" class="rce-cta-btn">Explore Confluences ↓</a>
+    </div>
+    <div class="rce-scroll-indicator"><div class="rce-scroll-mouse"><div class="rce-scroll-wheel"></div></div></div>
+</section>
+
+<!-- Confluences -->
+<section class="rce-section" id="confluences">
+    <div class="rce-container">
+        <div class="rce-section-header">
+            <span class="rce-section-badge">🔱 Where Rivers Meet</span>
+            <h2>Sacred River Confluences</h2>
+            <p class="rce-section-subtitle">A Prayag (confluence) is where two or more rivers merge — considered supremely sacred in Hinduism.</p>
+        </div>
+        <div class="rce-filter-tabs" id="filterTabs">
+            <button class="rce-filter-btn active" data-filter="all">All</button>
+            <button class="rce-filter-btn" data-filter="prayagraj">Prayagraj</button>
+            <button class="rce-filter-btn" data-filter="uttarakhand">Uttarakhand</button>
+            <button class="rce-filter-btn" data-filter="other">Other</button>
+        </div>
+        <div class="rce-grid" id="confluenceGrid"></div>
+    </div>
+</section>
+
+<!-- Map -->
+<section class="rce-section rce-dark-section" id="map-section">
+    <div class="rce-container">
+        <div class="rce-section-header">
+            <span class="rce-section-badge">🗺️ Interactive Map</span>
+            <h2>Confluences Across India</h2>
+            <p class="rce-section-subtitle">Click on any marker to explore the sacred confluence.</p>
+        </div>
+        <div class="rce-map-wrapper">
+            <div class="rce-map-container">
+                <svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+                    <path class="rce-india-outline" d="M200,80 L280,50 L350,60 L420,40 L500,55 L560,80 L600,120 L620,180 L640,240 L660,300 L650,360 L630,400 L600,440 L570,470 L540,500 L500,530 L460,550 L420,570 L380,580 L340,560 L300,540 L260,500 L230,460 L210,420 L190,380 L170,340 L160,280 L170,220 L180,160 L190,120 Z" fill="none" stroke="var(--rce-border)" stroke-width="1.5"/>
+                    <g id="mapMarkers"></g>
+                </svg>
+                <div class="rce-map-legend">
+                    <h4>Legend</h4>
+                    <div class="rce-legend-item"><span class="rce-legend-dot" style="background:#f59e0b"></span> Prayagraj Sangam</div>
+                    <div class="rce-legend-item"><span class="rce-legend-dot" style="background:#3b82f6"></span> Panch Prayag</div>
+                    <div class="rce-legend-item"><span class="rce-legend-dot" style="background:#10b981"></span> Southern Sangam</div>
+                </div>
+            </div>
+            <div class="rce-map-info-panel">
+                <div class="rce-map-info-default" id="infoDefault">
+                    <div class="rce-map-info-icon">🕉️</div>
+                    <h3>Explore Sacred Confluences</h3>
+                    <p>Click on a map marker or card to see detailed information about its rivers, geography, and cultural significance.</p>
+                </div>
+                <div class="rce-map-info-content" id="infoContent" style="display:none;">
+                    <button class="rce-info-close" id="infoClose">&times;</button>
+                    <div class="rce-info-icon" id="infoIcon">🔱</div>
+                    <span class="rce-info-tag" id="infoTag">Sacred</span>
+                    <h3 id="infoName">Name</h3>
+                    <p class="rce-info-desc" id="infoDesc"></p>
+                    <div class="rce-info-section"><h4>🌊 Rivers</h4><p id="infoRivers"></p></div>
+                    <div class="rce-info-section"><h4>📍 Geography</h4><p id="infoGeo"></p></div>
+                    <div class="rce-info-section"><h4>🙏 Significance</h4><p id="infoCulture"></p></div>
+                    <div class="rce-info-section"><h4>🎉 Festivals</h4><div class="rce-info-tags" id="infoFestivals"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Panch Prayag -->
+<section class="rce-section" id="prayags">
+    <div class="rce-container">
+        <div class="rce-section-header">
+            <span class="rce-section-badge">🏔️ Panch Prayag</span>
+            <h2>Five Sacred Confluences of Uttarakhand</h2>
+            <p class="rce-section-subtitle">The Panch Prayag are five sacred confluences along the Alaknanda River, forming a divine pilgrimage circuit.</p>
+        </div>
+        <div class="rce-timeline" id="prayagTimeline"></div>
+    </div>
+</section>
+
+<!-- Festivals -->
+<section class="rce-section rce-dark-section" id="festivals">
+    <div class="rce-container">
+        <div class="rce-section-header">
+            <span class="rce-section-badge">🎉 Festivals</span>
+            <h2>Festivals at Sacred Sangams</h2>
+            <p class="rce-section-subtitle">Massive gatherings at these sacred junctions celebrate the divine union of rivers.</p>
+        </div>
+        <div class="rce-grid-3" id="festivalGrid"></div>
+    </div>
+</section>
+
+<!-- Scriptures -->
+<section class="rce-section" id="scriptures">
+    <div class="rce-container">
+        <div class="rce-section-header">
+            <span class="rce-section-badge">📖 Sacred Literature</span>
+            <h2>Confluences in Hindu Scripture</h2>
+            <p class="rce-section-subtitle">Ancient texts elevate confluences as the holiest of bathing spots.</p>
+        </div>
+        <div class="rce-grid-3" id="scriptureGrid"></div>
+    </div>
+</section>
+
+<footer class="rce-footer">
+    <div class="rce-footer-content">
+        <div class="rce-footer-brand"><span class="saffron">Incredible</span> <span class="gold">India</span> <span class="green">Explorer</span></div>
+        <p class="rce-footer-text">Explore India's sacred river confluences — where holy waters merge.</p>
+        <p class="rce-footer-copy">&copy; 2026 Incredible India Explorer. River Confluences Explorer.</p>
+    </div>
+</footer>
+
+<!-- Modal -->
+<div class="rce-modal-overlay" id="modalOverlay">
+    <div class="rce-modal" role="dialog" aria-modal="true">
+        <button class="rce-modal-close" id="modalClose" aria-label="Close">&times;</button>
+        <div class="rce-modal-icon" id="modalIcon">🔱</div>
+        <span class="rce-modal-tag" id="modalTag">Sacred</span>
+        <h2 class="rce-modal-title" id="modalTitle">Name</h2>
+        <p class="rce-modal-intro" id="modalIntro"></p>
+        <div class="rce-modal-grid">
+            <div class="rce-modal-card"><h4>🌊 Rivers</h4><p id="modalRivers"></p></div>
+            <div class="rce-modal-card"><h4>📍 Location</h4><p id="modalLocation"></p></div>
+            <div class="rce-modal-card"><h4>🙏 Deity</h4><p id="modalDeity"></p></div>
+            <div class="rce-modal-card"><h4>🎉 Festivals</h4><p id="modalFestival"></p></div>
+        </div>
+        <div class="rce-modal-section"><h4>📜 History</h4><p id="modalHistory"></p></div>
+        <div class="rce-modal-section"><h4>🌿 Significance</h4><p id="modalCulture"></p></div>
+        <div class="rce-modal-section"><h4>🧭 Geography</h4><p id="modalGeo"></p></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

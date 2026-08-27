@@ -6550,15 +6550,22 @@ window.indiaSearchIndex = [
             "Explore the 2013 Uttarakhand flood disaster: extreme monsoon rainfall, Chorabari Tal glacial lake breach, Kedarnath devastation, Mandakini and Alaknanda valley impacts, Operation Surya Hope rescue, and disaster preparedness lessons.",
         url: "frontend/uttarakhand-floods-2013/index.html"
     },
-    // --- Stone Age Tool Discoveries of Didwana (#3790) ---
-    {
-        title: "Stone Age Tool Discoveries of Didwana \u2014 Prehistoric Rajasthan",
-        category: "Archaeological Excavations",
-        description:
-            "Explore the Stone Age tool discoveries of Didwana, Rajasthan: Lower, Middle and Upper Palaeolithic tool types, quartzite and sandstone raw materials, dune-section discovery context, and their scientific significance for dating early human occupation in the Thar Desert.",
-        url: "frontend/didwana-stone-age-tools/index.html"
-    },
-    // --- Prehistoric Paisra Site (#3789) ---
+// --- Prehistoric Tools of Isampur (#3782) ---
+{
+    title: "Prehistoric Tools of Isampur \u2014 Acheulean Quarry & Workshop",
+    category: "Archaeological Excavations",
+    description:
+        "Explore Isampur in Karnataka's Hunsgi Valley: its Lower Palaeolithic Acheulean quarry-cum-workshop context, limestone raw material, handaxes, cleavers, cores, flakes, hammerstones, dating evidence, archaeological significance, and location map.",
+    url: "frontend/isampur-stone-tools/index.html"
+},
+// --- Stone Age Tool Discoveries of Didwana (#3790) ---
+{
+    title: "Stone Age Tool Discoveries of Didwana \u2014 Prehistoric Rajasthan",
+    category: "Archaeological Excavations",
+    description:
+        "Explore the Stone Age tool discoveries of Didwana, Rajasthan: Lower, Middle and Upper Palaeolithic tool types, quartzite and sandstone raw materials, dune-section discovery context, and their scientific significance for dating early human occupation in the Thar Desert.",
+    url: "frontend/didwana-stone-age-tools/index.html"
+},    // --- Prehistoric Paisra Site (#3789) ---
     {
         title: "Prehistoric Paisra Site \u2014 Palaeolithic Bihar",
         category: "Archaeological Excavations",

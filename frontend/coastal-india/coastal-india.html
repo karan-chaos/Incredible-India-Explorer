@@ -5,9 +5,7 @@
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
-            if (theme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
+            document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
 <meta charset="utf-8"/>
@@ -403,14 +401,7 @@
     <link rel="canonical" href="https://incredibleindiaexplorer.gov.in/coastal-india.html">
 </head>
 <body>
-    <script>
-        (function() {
-            let theme = 'dark'; try { theme = JSON.parse(localStorage.getItem('iie_storage') || '{}').theme || 'dark'; } catch(e) {}
-            if (theme === 'light') {
-                document.body.classList.add('light-theme');
-            }
-        })();
-    </script>
+    
 <header class="navbar" id="navbar">
     <div class="nav-container">
         <a href="../../index.html#home" class="nav-logo" id="nav-logo">
@@ -425,6 +416,20 @@
         </button>
         <nav class="nav-menu" id="nav-menu">
             <a href="../../index.html#home" class="nav-link active" id="link-home">Home</a>
+            
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    Safety ▾
+                </button>
+                <div class="dropdown-menu">
+                    <a
+                        href="../../frontend/emergency-assistance/emergency.html"
+                        class="dropdown-item"
+                    >
+                        🚨 Emergency Assistance
+                    </a>
+                </div>
+            </div>
 
             <div class="nav-dropdown">
                 <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Destinations ▾</button>
@@ -434,7 +439,6 @@
                     <a href="../../frontend/ancient-ports-explorer/index.html" class="dropdown-item">Ancient Ports of India</a>
                     <a href="../../frontend/islands/islands.html" class="dropdown-item">Islands of India</a>
                     <a href="../../frontend/heritage/heritage.html" class="dropdown-item">Heritage Sites</a>
-                    <a href="../../frontend/forts/forts.html" class="dropdown-item">Forts of India</a>
                     <a href="../../frontend/route-planner/route-planner.html" class="dropdown-item">Route Planner</a>
                 </div>
             </div>
@@ -442,6 +446,7 @@
             <div class="nav-dropdown">
                 <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Culture ▾</button>
                 <div class="dropdown-menu">
+                    <a href="../../frontend/indian-cinema-history/index.html" class="dropdown-item">Indian Cinema</a>
                     <a href="../../frontend/culture/culture.html" class="dropdown-item">Culture Overview</a>
                     <a href="../../frontend/cuisine/cuisine.html" class="dropdown-item">Cuisine</a>
                     <a href="../../frontend/festivals/festivals.html" class="dropdown-item">Festivals</a>
@@ -624,6 +629,23 @@
 <div class="season-box"><span>Best time</span><strong>November – February</strong></div>
 <p class="attractions-title">Nearby attractions</p>
 <ul class="attractions-list"><li>San Thome Basilica</li><li>Fort St. George</li><li>Mylapore</li></ul>
+</div>
+</article>
+<article class="coastal-card" data-id="coastal-india-tharangambadi" data-region="south" data-search="tharangambadi tamil nadu south beach danish heritage colonial shore">
+<div class="coastal-media">
+<picture>
+  <source srcset="../assets/travel_beaches.webp" type="image/webp">
+  <img alt="Danish colonial beach scenery representing Tharangambadi" loading="lazy" src="../assets/travel_beaches.png"/>
+</picture>
+<span class="region-badge">South Coast</span>
+<span class="coast-badge">Heritage</span>
+<button aria-label="Save Tharangambadi to My Journey" aria-pressed="false" class="coastal-card-bookmark-btn journey-bookmark-btn" data-bookmark-id="coastal-india-tharangambadi" type="button">♡</button></div>
+<div class="coastal-body">
+<h3 class="coastal-title">Tharangambadi</h3>
+<p class="coastal-state">Tamil Nadu</p>
+<div class="season-box"><span>Best time</span><strong>October – March</strong></div>
+<p class="attractions-title">Nearby attractions</p>
+<ul class="attractions-list"><li>Dane Church</li><li>Tharangambadi Beach</li><li>Colonial Settlement</li></ul>
 </div>
 </article>
 <article class="coastal-card" data-id="coastal-india-radhanagar-beach" data-region="islands" data-search="radhanagar beach swaraj dweep havelock andaman islands elephant beach kalapathar">

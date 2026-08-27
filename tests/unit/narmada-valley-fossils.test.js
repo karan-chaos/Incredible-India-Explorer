@@ -86,4 +86,3 @@ describe("Narmada Valley Fossil Explorer", () => {
         expect(document.body.classList.contains("light-theme")).toBe(false);
     });
 });
-

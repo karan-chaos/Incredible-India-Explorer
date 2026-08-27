@@ -6671,5 +6671,14 @@ window.indiaSearchIndex = [
         description:
             "Explore the Deccan Traps: flood-basalt history, Western Ghats stratigraphy, a ~66 Ma timeline, intertrappean fossils, trap landscape, and an interactive site map.",
         url: "frontend/deccan-volcanic-landscape/index.html"
+    },
+
+    // --- Rivers of Northeast India (#3946) ---
+    {
+        title: "Rivers of Northeast India \u2014 Brahmaputra & Barak",
+        category: "Rivers",
+        description:
+            "Explore the Brahmaputra, Barak, Subansiri, Lohit, Dibang, Manas and Dhansiri, with state-wise filtering, an interactive map, and ecological importance.",
+        url: "frontend/northeast-rivers-explorer/index.html"
     }
 ];

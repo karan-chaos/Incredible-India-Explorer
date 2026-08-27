@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore the Teesta — Mountain River of Sikkim | Incredible India Explorer</title>
+
+    <meta
+        name="description"
+        content="Explore the Teesta River from its Himalayan origin through Sikkim and West Bengal, with its history, tributaries, glacial landscape, agriculture, hydropower and interactive route map."
+    >
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body class="teesta-page">
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="../../index.html#home" class="nav-logo" aria-label="Return to Incredible India Explorer">
+            <span class="saffron">Incredible</span>
+            <span class="gold">India</span>
+            <span class="green">Explorer</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+        >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="../../index.html#home" class="nav-link">Home</a>
+            <a href="#overview" class="nav-link">Overview</a>
+            <a href="#landscape" class="nav-link">Landscape</a>
+            <a href="#route-map" class="nav-link">Route Map</a>
+            <a href="#people" class="nav-link">People & Power</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="teesta-hero" id="overview">
+        <div class="hero-content">
+            <span class="eyebrow">Himalayan River System · Sikkim & West Bengal</span>
+
+            <h1>Explore the Teesta</h1>
+
+            <p class="hero-subtitle">
+                Mountain River of Sikkim
+            </p>
+
+            <p class="hero-description">
+                Follow the Teesta from its high Himalayan source through the
+                mountains of Sikkim, across West Bengal's northern plains,
+                and onward to Bangladesh.
+            </p>
+
+            <a class="hero-button" href="#route-map">
+                Explore the Route ↓
+            </a>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="section-heading">
+            <span class="eyebrow">01 · Origin</span>
+            <h2>Born in the High Himalaya</h2>
+        </div>
+
+        <div class="info-grid">
+            <article class="info-card">
+                <span class="card-icon">🏔️</span>
+                <h3>Himalayan Origin</h3>
+                <p>
+                    The Teesta system begins in the high Himalayan landscape
+                    of North Sikkim, with the Teesta Khangtse glacier and
+                    streams associated with Tso Lhamo and the surrounding
+                    glacial lakes feeding its upper course.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <span class="card-icon">💧</span>
+                <h3>Chungthang Confluence</h3>
+                <p>
+                    The river takes the name Teesta after the Lachan Chu and
+                    Lachung Chu meet at Chungthang in North Sikkim.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <span class="card-icon">🗺️</span>
+                <h3>Two Indian States</h3>
+                <p>
+                    Its dramatic mountain course crosses Sikkim before the
+                    river continues through northern West Bengal and onward
+                    into Bangladesh.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="content-section alternate" id="landscape">
+        <div class="section-heading">
+            <span class="eyebrow">02 · Meaning & History</span>
+            <h2>From Tri-Srota to Teesta</h2>
+        </div>
+
+        <div class="history-layout">
+            <div class="history-main">
+                <p>
+                    Teesta is also commonly written as <strong>Tista</strong>.
+                    Historical descriptions associate the river with the
+                    Sanskrit name <strong>Tri-Srota</strong>, meaning
+                    "three streams", reflecting the river's historically
+                    divided channels.
+                </p>
+
+                <p>
+                    Older descriptions of northern Bengal record channels
+                    such as <strong>Mara Tista</strong>, <strong>Bura Tista</strong>
+                    and <strong>Dadai</strong>. Major floods and changes in
+                    river channels altered the course over time.
+                </p>
+
+                <p>
+                    Today, the Teesta remains one of the defining river
+                    systems of the eastern Himalaya, linking mountain
+                    landscapes with the plains.
+                </p>
+            </div>
+
+            <aside class="fact-highlight">
+                <span>Historical identity</span>
+                <strong>Tri-Srota</strong>
+                <p>Associated with the river's three-channel tradition.</p>
+            </aside>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="section-heading">
+            <span class="eyebrow">03 · Tributaries</span>
+            <h2>Streams That Build the Teesta</h2>
+        </div>
+
+        <div class="tributary-grid">
+            <div class="tributary-card">
+                <strong>Lachung Chu</strong>
+                <span>North Sikkim</span>
+            </div>
+
+            <div class="tributary-card">
+                <strong>Lachan Chu</strong>
+                <span>North Sikkim</span>
+            </div>
+
+            <div class="tributary-card">
+                <strong>Rangit</strong>
+                <span>Major southern tributary</span>
+            </div>
+
+            <div class="tributary-card">
+                <strong>Rangpo Chu</strong>
+                <span>East Sikkim</span>
+            </div>
+
+            <div class="tributary-card">
+                <strong>Rangli</strong>
+                <span>Sikkim</span>
+            </div>
+
+            <div class="tributary-card">
+                <strong>Rani Khola</strong>
+                <span>East Sikkim</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section glacial-section">
+        <div class="section-heading">
+            <span class="eyebrow">04 · Glacial Landscape</span>
+            <h2>A River Shaped by Ice and Altitude</h2>
+        </div>
+
+        <div class="landscape-grid">
+            <article>
+                <h3>❄️ Glaciers</h3>
+                <p>
+                    Snow and glacier-fed streams supply the upper Teesta
+                    basin. High-altitude lakes and glaciers make the source
+                    region one of Sikkim's most striking landscapes.
+                </p>
+            </article>
+
+            <article>
+                <h3>⛰️ Deep Gorges</h3>
+                <p>
+                    From the high mountains, the river drops rapidly through
+                    steep valleys and narrow gorges, creating powerful
+                    currents and a large elevation gradient.
+                </p>
+            </article>
+
+            <article>
+                <h3>🌊 Changing Channels</h3>
+                <p>
+                    When the river reaches the plains, its gradient decreases
+                    and its channels become wider and more dynamic, especially
+                    during the monsoon.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="content-section" id="people">
+        <div class="section-heading">
+            <span class="eyebrow">05 · People & Livelihoods</span>
+            <h2>Water for Farms and Communities</h2>
+        </div>
+
+        <div class="people-grid">
+            <article class="info-card">
+                <span class="card-icon">🌾</span>
+                <h3>Agriculture</h3>
+                <p>
+                    Teesta water supports agriculture across the river basin.
+                    Rice, maize, vegetables and other crops benefit from
+                    irrigation, while the surrounding Sikkim hills are also
+                    known for high-value crops such as large cardamom.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <span class="card-icon">🍃</span>
+                <h3>North Bengal</h3>
+                <p>
+                    In West Bengal, the river system supports irrigation in
+                    northern districts and forms an important part of the
+                    region's water landscape.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <span class="card-icon">⚡</span>
+                <h3>Hydropower</h3>
+                <p>
+                    The steep elevation drop in Sikkim has made the Teesta
+                    basin important for hydropower development, including
+                    projects such as Teesta Stage III and Teesta Stage V.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="content-section map-section" id="route-map">
+        <div class="section-heading">
+            <span class="eyebrow">06 · Interactive Route</span>
+            <h2>Trace the Teesta</h2>
+            <p>
+                Click any route marker to explore a major stage of the river's
+                journey from the Himalaya to the plains.
+            </p>
+        </div>
+
+        <div class="map-layout">
+            <div
+                id="teesta-map"
+                class="teesta-map"
+                role="application"
+                aria-label="Interactive map showing the Teesta River route"
+            ></div>
+
+            <aside class="route-panel" aria-live="polite">
+                <span class="route-label" id="route-stage">START</span>
+                <h3 id="route-title">Tso Lhamo & High Himalaya</h3>
+                <p id="route-description">
+                    Explore the high-altitude source landscape that feeds the
+                    upper Teesta system.
+                </p>
+
+                <div class="route-stats">
+                    <div>
+                        <span>Region</span>
+                        <strong id="route-region">North Sikkim</strong>
+                    </div>
+
+                    <div>
+                        <span>Stage</span>
+                        <strong id="route-number">1 / 8</strong>
+                    </div>
+                </div>
+
+                <button class="map-reset" id="reset-route">
+                    Reset Route View
+                </button>
+            </aside>
+        </div>
+    </section>
+
+    <section class="content-section final-section">
+        <div class="final-card">
+            <span class="eyebrow">The Teesta Story</span>
+            <h2>From Glacier to the Plains</h2>
+            <p>
+                The Teesta connects glacial landscapes, Himalayan settlements,
+                forests, farms, irrigation systems and hydropower infrastructure
+                across one continuous river corridor.
+            </p>
+
+            <a href="#route-map" class="hero-button">
+                Explore the Map Again ↑
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="teesta-footer">
+    <p>Incredible India Explorer · Explore the Teesta — Mountain River of Sikkim</p>
+</footer>
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+></script>
+<script src="script.js"></script>
+
+</body>
+</html>

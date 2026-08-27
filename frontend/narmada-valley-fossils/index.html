@@ -1,0 +1,348 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || "dark";
+            if (theme === "light") {
+                document.documentElement.classList.add("light-theme");
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fossil Discoveries of the Narmada Valley | Incredible India Explorer</title>
+    <meta name="description" content="Explore prehistoric fossil discoveries of the Narmada Valley, including Hathnora hominin remains, Pleistocene megafauna, dinosaur fossils, geological context, and important fossil localities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="topnav" aria-label="Primary navigation">
+            <a class="brand" href="../../index.html">Incredible India Explorer</a>
+
+            <div class="nav-links">
+                <a href="#geography">Geography</a>
+                <a href="#discoveries">Discoveries</a>
+                <a href="#geology">Geology</a>
+                <a href="#animals">Animals</a>
+                <a href="#significance">Significance</a>
+                <a href="#map">Map</a>
+            </div>
+
+            <button type="button" id="theme-toggle" class="theme-toggle"
+                    aria-label="Switch to light theme">☀️</button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="hero">
+            <p class="eyebrow">Palaeontology · Geoheritage · Prehistory</p>
+            <h1>Fossil Discoveries of the Narmada Valley</h1>
+            <p class="hero-date">A fossil record spanning the Late Cretaceous to the Pleistocene</p>
+            <p class="lede">
+                The Narmada Valley preserves an exceptional record of prehistoric life.
+                Dinosaur remains, large Ice Age mammals, crocodilians and the famous
+                Hathnora hominin discovery together reveal changing landscapes and
+                ecosystems across millions of years.
+            </p>
+
+            <dl class="hero-stats">
+                <div>
+                    <dt>Major hominin locality</dt>
+                    <dd>Hathnora</dd>
+                </div>
+                <div>
+                    <dt>River</dt>
+                    <dd>Narmada</dd>
+                </div>
+                <div>
+                    <dt>Key fossil record</dt>
+                    <dd>Dinosaurs → Megafauna</dd>
+                </div>
+                <div>
+                    <dt>Research value</dt>
+                    <dd>Human evolution</dd>
+                </div>
+            </dl>
+        </header>
+
+        <section class="block" id="geography" aria-labelledby="geography-heading">
+            <div class="section-head">
+                <span class="tag">Geography</span>
+                <h2 id="geography-heading">The Narmada fossil landscape</h2>
+            </div>
+
+            <div class="grid-2">
+                <article class="card">
+                    <h3>Central Indian river corridor</h3>
+                    <p>
+                        The Narmada flows east to west across central India through
+                        Madhya Pradesh and Gujarat before reaching the Arabian Sea.
+                        Its valley exposes sedimentary deposits that preserve fossils
+                        from very different geological periods.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Important localities</h3>
+                    <p>
+                        Fossil-bearing areas include Hathnora and other Narmada
+                        basin localities around central Madhya Pradesh, while
+                        dinosaur-bearing Cretaceous rocks occur farther west in the
+                        broader Narmada basin.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="discoveries" aria-labelledby="discoveries-heading">
+            <div class="section-head">
+                <span class="tag">Discoveries</span>
+                <h2 id="discoveries-heading">Fossils that changed our understanding</h2>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline-card">
+                    <div class="timeline-date">Late Cretaceous</div>
+                    <div>
+                        <h3>Dinosaur fossils of the Narmada basin</h3>
+                        <p>
+                            Dinosaur bones and eggshell material occur in the Lameta
+                            Formation of the Narmada region. The record includes
+                            titanosaur sauropods and abelisaurid theropods, including
+                            the species <em>Rajasaurus narmadensis</em>.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-card">
+                    <div class="timeline-date">Pleistocene</div>
+                    <div>
+                        <h3>Hathnora hominin discovery</h3>
+                        <p>
+                            A partial hominin cranium discovered near Hathnora in
+                            the Narmada Valley became one of the most important
+                            prehistoric human fossils from the Indian subcontinent.
+                            Its precise taxonomic classification remains debated.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-card">
+                    <div class="timeline-date">Pleistocene</div>
+                    <div>
+                        <h3>Large mammal fossils</h3>
+                        <p>
+                            Narmada sediments have yielded remains of large
+                            prehistoric mammals such as elephants, hippopotamuses,
+                            bovids and other fauna, providing evidence of ancient
+                            riverine and grassland environments.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="geology" aria-labelledby="geology-heading">
+            <div class="section-head">
+                <span class="tag">Geological Context</span>
+                <h2 id="geology-heading">How the fossils were preserved</h2>
+            </div>
+
+            <div class="geology-grid">
+                <article class="layer-card">
+                    <span class="layer-period">Late Cretaceous</span>
+                    <h3>Lameta Formation</h3>
+                    <p>
+                        Fluvial and lacustrine sediments associated with the
+                        Lameta Formation preserve dinosaur bones, eggs and other
+                        vertebrate remains in parts of the Narmada basin.
+                    </p>
+                </article>
+
+                <article class="layer-card">
+                    <span class="layer-period">Pleistocene</span>
+                    <h3>River deposits</h3>
+                    <p>
+                        Younger gravel, sand and silt deposits along the Narmada
+                        record changing river environments and contain important
+                        mammalian and hominin remains.
+                    </p>
+                </article>
+
+                <article class="layer-card">
+                    <span class="layer-period">Modern landscape</span>
+                    <h3>Narmada terraces</h3>
+                    <p>
+                        River terraces and exposed sedimentary sections allow
+                        researchers to investigate how climate, rivers, vegetation
+                        and animal communities changed through time.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="animals" aria-labelledby="animals-heading">
+            <div class="section-head">
+                <span class="tag">Prehistoric Animals</span>
+                <h2 id="animals-heading">Life recorded in the valley</h2>
+            </div>
+
+            <div class="animal-grid">
+                <article class="animal-card featured">
+                    <span class="animal-type">Theropod</span>
+                    <h3><em>Rajasaurus narmadensis</em></h3>
+                    <p>
+                        A Late Cretaceous abelisaurid theropod from the Narmada
+                        basin, recognized by distinctive skull anatomy and a
+                        prominent nasal-frontal horn.
+                    </p>
+                </article>
+
+                <article class="animal-card">
+                    <span class="animal-type">Sauropod</span>
+                    <h3>Titanosaur dinosaurs</h3>
+                    <p>
+                        Long-necked herbivorous sauropods are represented by
+                        numerous skeletal remains from the Lameta Formation.
+                    </p>
+                </article>
+
+                <article class="animal-card">
+                    <span class="animal-type">Proboscidean</span>
+                    <h3>Prehistoric elephants</h3>
+                    <p>
+                        Fossil elephants and relatives document the rich
+                        Pleistocene megafauna that lived around ancient river
+                        environments.
+                    </p>
+                </article>
+
+                <article class="animal-card">
+                    <span class="animal-type">Hippopotamid</span>
+                    <h3>Hippopotamus relatives</h3>
+                    <p>
+                        Hippopotamid fossils indicate the presence of substantial
+                        water bodies and productive riverine habitats during parts
+                        of the Pleistocene.
+                    </p>
+                </article>
+
+                <article class="animal-card">
+                    <span class="animal-type">Reptile</span>
+                    <h3>Crocodilians</h3>
+                    <p>
+                        Crocodilian remains provide additional evidence for
+                        freshwater habitats associated with the prehistoric
+                        Narmada river system.
+                    </p>
+                </article>
+
+                <article class="animal-card">
+                    <span class="animal-type">Hominin</span>
+                    <h3>Hathnora hominin</h3>
+                    <p>
+                        The Hathnora cranium is a key South Asian hominin fossil
+                        and an important reference point in studies of human
+                        dispersal and evolution.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="significance" aria-labelledby="significance-heading">
+            <div class="section-head">
+                <span class="tag">Scientific Significance</span>
+                <h2 id="significance-heading">Why the Narmada Valley matters</h2>
+            </div>
+
+            <div class="grid-2">
+                <article class="card">
+                    <h3>Human evolution</h3>
+                    <p>
+                        The Hathnora discovery provides rare physical evidence for
+                        prehistoric hominins in South Asia and contributes to wider
+                        debates about early human dispersal across the region.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Gondwana dinosaurs</h3>
+                    <p>
+                        Cretaceous dinosaur fossils connect India's prehistoric
+                        fauna with the wider Gondwanan world and help reconstruct
+                        ecosystems shortly before the end-Cretaceous extinction.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Palaeoenvironment</h3>
+                    <p>
+                        Fossils from different periods allow scientists to compare
+                        ancient river systems, vegetation, climate and animal
+                        communities across deep geological time.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Indian geoheritage</h3>
+                    <p>
+                        The valley demonstrates why geological landscapes are
+                        important archives of India's biological and environmental
+                        history.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="map" aria-labelledby="map-heading">
+            <div class="section-head">
+                <span class="tag">Map</span>
+                <h2 id="map-heading">Explore key fossil localities</h2>
+            </div>
+
+            <div class="map-layout">
+                <div class="map-frame-wrap">
+                    <iframe id="fossil-map"
+                            title="Map showing important Narmada Valley fossil localities"
+                            loading="lazy"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8%2C20.4%2C82.5%2C24.8%26layer=mapnik%26marker=22.9%2C78.5">
+                    </iframe>
+                </div>
+
+                <div class="map-panel">
+                    <p>Select a locality to focus the map.</p>
+
+                    <div class="map-buttons">
+                        <button type="button" class="map-btn is-active" data-place="hathnora">Hathnora</button>
+                        <button type="button" class="map-btn" data-place="jabalpur">Jabalpur</button>
+                        <button type="button" class="map-btn" data-place="balasinor">Balasinor</button>
+                    </div>
+
+                    <article class="map-info">
+                        <h3 id="map-info-title">Hathnora</h3>
+                        <p id="map-info-desc">
+                            Near the Narmada River in Madhya Pradesh, Hathnora is
+                            associated with the famous Pleistocene hominin discovery
+                            and other fossil fauna.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Narmada Valley Fossil Explorer · Incredible India Explorer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```

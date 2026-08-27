@@ -6671,5 +6671,14 @@ window.indiaSearchIndex = [
         description:
             "Explore the Deccan Traps: flood-basalt history, Western Ghats stratigraphy, a ~66 Ma timeline, intertrappean fossils, trap landscape, and an interactive site map.",
         url: "frontend/deccan-volcanic-landscape/index.html"
+    },
+
+    // --- Kerala Rivers Explorer (#3947) ---
+    {
+        title: "Kerala's Rivers \u2014 Origins, Backwaters & Districts",
+        category: "Rivers",
+        description:
+            "Explore Kerala's major rivers: origins, districts crossed, name meanings, tributaries, backwater connections, agriculture, ecology, and an interactive map.",
+        url: "frontend/kerala-rivers-explorer/index.html"
     }
 ];

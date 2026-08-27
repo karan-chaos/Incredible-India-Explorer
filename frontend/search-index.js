@@ -6477,8 +6477,15 @@ window.indiaSearchIndex = [
             "Explore the 3–4 October 2023 South Lhonak glacial lake outburst flood: lake geography, Teesta basin, GLOF hazards, Chungthang dam and highway damage, early-warning gaps, and Himalayan risk mitigation.",
         url: "frontend/south-lhonak-glof-2023-explorer/index.html"
     },
-    // --- feat/shabari-rama-story ---
+    // --- Explore the Teesta — Mountain River of Sikkim #3926 ---
     {
+        title: "Explore the Teesta — Mountain River of Sikkim",
+        category: "Rivers & Geography",
+        description:
+            "Explore the Teesta River from its Himalayan origin through Sikkim and West Bengal, including its meaning and historical names, tributaries, glacial landscape, agriculture, hydropower and interactive route map.",
+        url: "frontend/teesta-river-explorer/index.html"
+    },
+    // --- feat/shabari-rama-story ---    {
         title: "Add Shabari and Rama \u2014 A Story of Devotion",
         category: "Culture & Literature",
         description:

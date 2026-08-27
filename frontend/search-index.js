@@ -6679,6 +6679,13 @@ window.indiaSearchIndex = [
         category: "Rivers",
         description:
             "Explore Kerala's major rivers: origins, districts crossed, name meanings, tributaries, backwater connections, agriculture, ecology, and an interactive map.",
-        url: "frontend/kerala-rivers-explorer/index.html"
+        url: "frontend/kerala-rivers-explorer/index.html"},
+    // --- Rivers of Northeast India (#3946) ---
+    {
+        title: "Rivers of Northeast India \u2014 Brahmaputra & Barak",
+        category: "Rivers",
+        description:
+            "Explore the Brahmaputra, Barak, Subansiri, Lohit, Dibang, Manas and Dhansiri, with state-wise filtering, an interactive map, and ecological importance.",
+        url: "frontend/northeast-rivers-explorer/index.html"
     }
 ];

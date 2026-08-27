@@ -1,4 +1,4 @@
-```javascript
+
 (function () {
     const places = {
         hathnora: {
@@ -108,4 +108,3 @@
         places: places
     };
 })();
-```

@@ -6574,15 +6574,22 @@ window.indiaSearchIndex = [
             "Explore Acheulean stone tool technology across prehistoric India: handaxes, cleavers, major archaeological sites such as Attirampakkam, Hunsgi-Isampur, Bhimbetka, Chirki-Nevasa, Didwana and Paisra, a technology timeline, and an interactive map of key sites.",
         url: "frontend/acheulean-stone-technology/index.html"
     },
-    // --- Mesolithic Sites Across India (#3792) ---
-    {
-        title: "Mesolithic Sites Across India \u2014 Microliths & Rock Art",
-        category: "Archaeological Excavations",
-        description:
-            "Explore major Mesolithic sites across India including Bhimbetka, Bagor, Sarai Nahar Rai, Langhnaj, Adamgarh and Tilwara: microlithic stone tools, settlement and burial evidence, rock art, chronology, and an interactive map of key sites.",
-        url: "frontend/mesolithic-sites-india/index.html"
-    },
-    // --- feat/rama-setu-story ---
+// --- Stone Age of India (#3779) ---
+{
+    title: "Stone Age of India — Paleolithic, Mesolithic & Neolithic",
+    category: "Archaeological Excavations",
+    description:
+        "Explore India's Paleolithic, Mesolithic and Neolithic archaeological heritage through major periods, important sites, stone tools, early settlements, a prehistoric timeline and an interactive map.",
+    url: "frontend/stone-age-india/index.html"
+},
+// --- Mesolithic Sites Across India (#3792) ---
+{
+    title: "Mesolithic Sites Across India — Microliths & Rock Art",
+    category: "Archaeological Excavations",
+    description:
+        "Explore major Mesolithic sites across India including Bhimbetka, Bagor, Sarai Nahar Rai, Langhnaj, Adamgarh and Tilwara: microlithic stone tools, settlement and burial evidence, rock art, chronology, and an interactive map of key sites.",
+    url: "frontend/mesolithic-sites-india/index.html"
+},    // --- feat/rama-setu-story ---
     {
         title: "Add Rama Setu \u2014 The Legendary Journey to Lanka",
         category: "Culture & Literature",

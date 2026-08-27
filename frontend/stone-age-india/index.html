@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Explore India's Stone Age heritage through the Paleolithic, Mesolithic and Neolithic periods, important archaeological sites, stone tools, early settlements, timeline and interactive map."
+    >
+    <title>Stone Age of India | Incredible India Explorer</title>
+
+    <link rel="stylesheet" href="../pages-common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="../../index.html#home" class="nav-logo">
+                <span class="saffron">Incredible</span>
+                <span class="gold">India</span>
+                <span class="green">Explorer</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../../index.html#home">Home</a>
+                <a href="#periods">Periods</a>
+                <a href="#sites">Sites</a>
+                <a href="#tools">Tools</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#map">Map</a>
+            </div>
+
+            <button
+                type="button"
+                id="theme-toggle"
+                class="theme-toggle"
+                aria-label="Toggle dark and light mode"
+            >
+                ☀️
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">PREHISTORIC INDIA</span>
+                <h1>Explore the Stone Age of India</h1>
+                <p class="hero-subtitle">
+                    From early hunter-gatherers to the first farming communities.
+                </p>
+                <p class="hero-description">
+                    Travel through India's Paleolithic, Mesolithic and Neolithic
+                    archaeological heritage and discover how tools, settlements,
+                    food production and human lifestyles changed over thousands
+                    of years.
+                </p>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>3</strong>
+                        <span>Major periods</span>
+                    </div>
+                    <div>
+                        <strong>1M+</strong>
+                        <span>Years of prehistory</span>
+                    </div>
+                    <div>
+                        <strong>12+</strong>
+                        <span>Key sites</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="periods" aria-labelledby="periods-title">
+            <div class="section-heading">
+                <span class="eyebrow">MAJOR PERIODS</span>
+                <h2 id="periods-title">Three stages of Stone Age life</h2>
+            </div>
+
+            <div class="period-grid">
+                <article class="period-card paleolithic">
+                    <span class="period-number">01</span>
+                    <span class="period-label">Old Stone Age</span>
+                    <h3>Paleolithic</h3>
+                    <p class="period-date">
+                        c. 2 million BCE – 10,000 BCE
+                    </p>
+                    <p>
+                        Early communities depended mainly on hunting, gathering
+                        and wild resources. Large stone tools such as handaxes
+                        and cleavers became important technologies.
+                    </p>
+                    <ul>
+                        <li>Hunter-gatherer communities</li>
+                        <li>Handaxes and cleavers</li>
+                        <li>Rock shelters and open-air sites</li>
+                    </ul>
+                </article>
+
+                <article class="period-card mesolithic">
+                    <span class="period-number">02</span>
+                    <span class="period-label">Middle Stone Age</span>
+                    <h3>Mesolithic</h3>
+                    <p class="period-date">
+                        c. 10,000 – 6,000 BCE
+                    </p>
+                    <p>
+                        Smaller microlithic tools became widespread as people
+                        adapted to changing post-Ice Age environments. Hunting,
+                        fishing and gathering remained important.
+                    </p>
+                    <ul>
+                        <li>Microliths</li>
+                        <li>Rock art</li>
+                        <li>Burials and seasonal settlements</li>
+                    </ul>
+                </article>
+
+                <article class="period-card neolithic">
+                    <span class="period-number">03</span>
+                    <span class="period-label">New Stone Age</span>
+                    <h3>Neolithic</h3>
+                    <p class="period-date">
+                        c. 7,000 – 2,000 BCE
+                    </p>
+                    <p>
+                        Farming, animal domestication, pottery and more
+                        permanent settlements became increasingly important,
+                        although the transition occurred at different times
+                        across India.
+                    </p>
+                    <ul>
+                        <li>Ground and polished tools</li>
+                        <li>Agriculture and herding</li>
+                        <li>Settled village communities</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section alternate" id="sites" aria-labelledby="sites-title">
+            <div class="section-heading">
+                <span class="eyebrow">ARCHAEOLOGICAL HERITAGE</span>
+                <h2 id="sites-title">Important Stone Age sites</h2>
+            </div>
+
+            <div class="site-grid">
+                <article class="site-card">
+                    <span class="site-period">Paleolithic</span>
+                    <h3>Attirampakkam</h3>
+                    <p class="site-location">Tamil Nadu</p>
+                    <p>
+                        One of India's most important Paleolithic sites, known
+                        for a long sequence of Acheulean and later stone-tool
+                        technologies.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Paleolithic</span>
+                    <h3>Hunsgi–Baichbal Valley</h3>
+                    <p class="site-location">Karnataka</p>
+                    <p>
+                        A major cluster of Paleolithic localities associated
+                        with stone-tool production and prehistoric occupation.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Paleolithic</span>
+                    <h3>Bhimbetka</h3>
+                    <p class="site-location">Madhya Pradesh</p>
+                    <p>
+                        Rock shelters preserving evidence of prehistoric
+                        occupation and an extensive sequence of rock art.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Mesolithic</span>
+                    <h3>Bagor</h3>
+                    <p class="site-location">Rajasthan</p>
+                    <p>
+                        A long-occupied site on the Kothari River with
+                        microlithic technology and evidence of changing
+                        subsistence practices.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Mesolithic</span>
+                    <h3>Sarai Nahar Rai</h3>
+                    <p class="site-location">Uttar Pradesh</p>
+                    <p>
+                        An important Mesolithic burial site that provides
+                        evidence about the lives and mortuary practices of
+                        prehistoric communities.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Mesolithic</span>
+                    <h3>Langhnaj</h3>
+                    <p class="site-location">Gujarat</p>
+                    <p>
+                        A key western Indian Mesolithic site associated with
+                        microliths, human remains and animal remains.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Neolithic</span>
+                    <h3>Burzahom</h3>
+                    <p class="site-location">Kashmir</p>
+                    <p>
+                        Famous for pit dwellings, stone tools, pottery, animal
+                        remains and evidence of changing settlement patterns.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Neolithic</span>
+                    <h3>Koldihwa</h3>
+                    <p class="site-location">Uttar Pradesh</p>
+                    <p>
+                        An important Belan Valley site associated with early
+                        farming and rice cultivation evidence.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Neolithic</span>
+                    <h3>Chirand</h3>
+                    <p class="site-location">Bihar</p>
+                    <p>
+                        A major Neolithic settlement with pottery, bone tools,
+                        stone tools and evidence of food production.
+                    </p>
+                </article>
+
+                <article class="site-card">
+                    <span class="site-period">Neolithic</span>
+                    <h3>Daojali Hading</h3>
+                    <p class="site-location">Assam</p>
+                    <p>
+                        An important northeastern site associated with polished
+                        stone tools and early settled communities.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="tools" aria-labelledby="tools-title">
+            <div class="section-heading">
+                <span class="eyebrow">STONE TECHNOLOGY</span>
+                <h2 id="tools-title">Tools that shaped prehistoric life</h2>
+            </div>
+
+            <div class="tools-grid">
+                <article class="tool-card">
+                    <div class="tool-icon">🪓</div>
+                    <h3>Handaxes</h3>
+                    <p>
+                        Bifacially worked tools associated especially with
+                        Acheulean technology. They were useful for cutting,
+                        butchering and processing materials.
+                    </p>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">🔨</div>
+                    <h3>Cleavers</h3>
+                    <p>
+                        Large cutting tools with broad working edges that form
+                        part of the Acheulean toolkit found at several Indian
+                        Paleolithic sites.
+                    </p>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">🔹</div>
+                    <h3>Microliths</h3>
+                    <p>
+                        Small geometric and blade-like stone tools became
+                        characteristic of many Mesolithic assemblages and could
+                        be used as composite tool components.
+                    </p>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">⚒️</div>
+                    <h3>Ground Stone Tools</h3>
+                    <p>
+                        Polished axes and related tools became increasingly
+                        important during the Neolithic, particularly for
+                        woodworking and farming activities.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section alternate" id="settlements" aria-labelledby="settlements-title">
+            <div class="section-heading">
+                <span class="eyebrow">EARLY SETTLEMENTS</span>
+                <h2 id="settlements-title">From shelters to villages</h2>
+            </div>
+
+            <div class="settlement-flow">
+                <article>
+                    <span>01</span>
+                    <h3>Mobile groups</h3>
+                    <p>
+                        Paleolithic communities moved through landscapes
+                        following water, animals and seasonal resources.
+                    </p>
+                </article>
+
+                <div class="flow-arrow">→</div>
+
+                <article>
+                    <span>02</span>
+                    <h3>Seasonal camps</h3>
+                    <p>
+                        Mesolithic groups used repeated camps, rock shelters
+                        and resource-rich locations while maintaining mobility.
+                    </p>
+                </article>
+
+                <div class="flow-arrow">→</div>
+
+                <article>
+                    <span>03</span>
+                    <h3>Village life</h3>
+                    <p>
+                        Neolithic communities increasingly invested in houses,
+                        storage, farming, herding and longer-term settlements.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="timeline" aria-labelledby="timeline-title">
+            <div class="section-heading">
+                <span class="eyebrow">TIMELINE</span>
+                <h2 id="timeline-title">A long prehistoric journey</h2>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <span class="timeline-date">~2 million BCE</span>
+                    <div>
+                        <h3>Early Paleolithic traditions</h3>
+                        <p>
+                            Early stone-tool technologies appear in the Indian
+                            subcontinent.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-date">~1.5 million BCE</span>
+                    <div>
+                        <h3>Acheulean expansion</h3>
+                        <p>
+                            Acheulean handaxes and cleavers become an important
+                            part of the archaeological record at sites such as
+                            Attirampakkam.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-date">~10,000 BCE</span>
+                    <div>
+                        <h3>Mesolithic transition</h3>
+                        <p>
+                            Microlithic technologies become widespread as
+                            communities adapt to post-Ice Age environments.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-date">~7,000 BCE</span>
+                    <div>
+                        <h3>Early Neolithic communities</h3>
+                        <p>
+                            Farming, animal management and more permanent
+                            settlements emerge in different parts of the
+                            subcontinent at different times.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-date">~3,000–2,000 BCE</span>
+                    <div>
+                        <h3>Established village traditions</h3>
+                        <p>
+                            Neolithic lifeways become established across
+                            several regional traditions before later
+                            Chalcolithic developments.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section alternate" id="map" aria-labelledby="map-title">
+            <div class="section-heading">
+                <span class="eyebrow">INTERACTIVE MAP</span>
+                <h2 id="map-title">Explore Stone Age sites across India</h2>
+            </div>
+
+            <div class="map-layout">
+                <div
+                    id="stone-age-map"
+                    class="india-map"
+                    role="img"
+                    aria-label="Interactive map of selected Stone Age archaeological sites in India"
+                >
+                    <div class="map-outline" aria-hidden="true"></div>
+                </div>
+
+                <aside class="map-details" aria-live="polite">
+                    <p class="map-help">
+                        Select a site marker to view its period and archaeological
+                        significance.
+                    </p>
+
+                    <div id="map-detail">
+                        <span class="detail-period">SELECT A SITE</span>
+                        <h3 id="map-site-name">Stone Age India</h3>
+                        <p id="map-site-location">
+                            Choose a marker on the map.
+                        </p>
+                        <p id="map-site-description">
+                            Explore important Paleolithic, Mesolithic and
+                            Neolithic archaeological locations.
+                        </p>
+                    </div>
+
+                    <div class="map-legend">
+                        <span><i class="legend-dot paleolithic-dot"></i>Paleolithic</span>
+                        <span><i class="legend-dot mesolithic-dot"></i>Mesolithic</span>
+                        <span><i class="legend-dot neolithic-dot"></i>Neolithic</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Incredible India Explorer · Exploring India's Stone Age heritage</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-```javascript
+
 import { describe, it, expect, beforeEach } from "vitest";
 import { JSDOM } from "jsdom";
 import fs from "fs";
@@ -86,4 +86,4 @@ describe("Narmada Valley Fossil Explorer", () => {
         expect(document.body.classList.contains("light-theme")).toBe(false);
     });
 });
-```
+

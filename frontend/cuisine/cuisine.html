@@ -5,9 +5,7 @@
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
-            if (theme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
+            document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
     <meta charset="UTF-8">
@@ -21,15 +19,16 @@
     <link rel="preload" href="../../assets/fonts/Outfit-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../assets/fonts/Outfit-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../assets/fonts/PlayfairDisplay-400.woff2" as="font" type="font/woff2" crossorigin>
-<!-- Custom Stylesheet -->
+    <!-- Custom Stylesheet -->
 
     <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="../js-modules/compare-drawer/compare-drawer.css">
-  <link rel="stylesheet" href="../js-modules/page-progress/page-progress.css">
+    <link rel="stylesheet" href="../js-modules/compare-drawer/compare-drawer.css">
+    <link rel="stylesheet" href="../js-modules/page-progress/page-progress.css">
 
     <!-- Open Graph / Social Media Tags -->
     <meta property="og:title" content="Indian Cuisine Explorer | Incredible India Explorer">
-    <meta property="og:description" content="Explore the diverse, rich, and mouth-watering cuisines of India. Discover recipes, regional spices, and the story of each traditional dish.">
+    <meta property="og:description"
+        content="Explore the diverse, rich, and mouth-watering cuisines of India. Discover recipes, regional spices, and the story of each traditional dish.">
     <meta property="og:image" content="https://incredibleindiaexplorer.gov.in/assets/Brihadeeswara_Temple.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,21 +39,15 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Indian Cuisine Explorer | Incredible India Explorer">
-    <meta name="twitter:description" content="Explore the diverse, rich, and mouth-watering cuisines of India. Discover recipes, regional spices, and the story of each traditional dish.">
+    <meta name="twitter:description"
+        content="Explore the diverse, rich, and mouth-watering cuisines of India. Discover recipes, regional spices, and the story of each traditional dish.">
     <meta name="twitter:image" content="https://incredibleindiaexplorer.gov.in/assets/Brihadeeswara_Temple.png">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://incredibleindiaexplorer.gov.in/cuisine.html">
 </head>
 
 <body class="cuisine-page-body">
-    <script>
-        (function() {
-            let theme = 'dark'; try { theme = JSON.parse(localStorage.getItem('iie_storage') || '{}').theme || 'dark'; } catch(e) {}
-            if (theme === 'light') {
-                document.body.classList.add('light-theme');
-            }
-        })();
-    </script>
+    
 
     <!-- Sticky Navigation Bar -->
     <header class="navbar" id="navbar">
@@ -71,6 +64,20 @@
         </button>
         <nav class="nav-menu" id="nav-menu">
             <a href="../../index.html#home" class="nav-link active" id="link-home">Home</a>
+            
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    Safety ▾
+                </button>
+                <div class="dropdown-menu">
+                    <a
+                        href="../../frontend/emergency-assistance/emergency.html"
+                        class="dropdown-item"
+                    >
+                        🚨 Emergency Assistance
+                    </a>
+                </div>
+            </div>
 
             <div class="nav-dropdown">
                 <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Destinations ▾</button>
@@ -80,7 +87,6 @@
                     <a href="../../frontend/ancient-ports-explorer/index.html" class="dropdown-item">Ancient Ports of India</a>
                     <a href="../../frontend/islands/islands.html" class="dropdown-item">Islands of India</a>
                     <a href="../../frontend/heritage/heritage.html" class="dropdown-item">Heritage Sites</a>
-                    <a href="../../frontend/forts/forts.html" class="dropdown-item">Forts of India</a>
                     <a href="../../frontend/route-planner/route-planner.html" class="dropdown-item">Route Planner</a>
                 </div>
             </div>
@@ -88,6 +94,7 @@
             <div class="nav-dropdown">
                 <button class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Culture ▾</button>
                 <div class="dropdown-menu">
+                    <a href="../../frontend/indian-cinema-history/index.html" class="dropdown-item">Indian Cinema</a>
                     <a href="../../frontend/culture/culture.html" class="dropdown-item">Culture Overview</a>
                     <a href="../../frontend/cuisine/cuisine.html" class="dropdown-item">Cuisine</a>
                     <a href="../../frontend/festivals/festivals.html" class="dropdown-item">Festivals</a>
@@ -155,6 +162,20 @@
             </div>
         </section>
 
+        <!-- Regional Thali Guide Promo -->
+        <section class="section-container" style="margin: 2rem auto;">
+            <a href="../regional-thalis/index.html" class="thali-promo-banner"
+                style="display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; padding:1.5rem 2rem; border-radius:16px; background:linear-gradient(135deg, #e65100, #ff9800); color:#fff; text-decoration:none;">
+                <div>
+                    <h2 style="margin:0 0 0.4rem; font-size:1.4rem;">🍽️ Explore India's Regional Thalis</h2>
+                    <p style="margin:0; opacity:0.92; max-width:520px;">Click a state on an interactive map to discover
+                        its traditional thali — dishes, serving customs, festival connections, and cultural
+                        significance.</p>
+                </div>
+                <span style="font-weight:700; white-space:nowrap;">Open the Thali Map →</span>
+            </a>
+        </section>
+
         <!-- Cuisine Catalog Section -->
         <section class="cuisine-catalog-section">
             <h2 class="sr-only">Regional Cuisine List</h2>
@@ -196,10 +217,10 @@
             </div>
             <div class="drawer-body">
                 <div class="drawer-img-container">
-<picture>
-  <source srcset="../assets/cuisine_default.webp" type="image/webp">
-  <img id="drawer-img" src="../assets/cuisine_default.png" alt="Cuisine Name">
-</picture>
+                    <picture>
+                        <source srcset="../assets/cuisine_default.webp" type="image/webp">
+                        <img id="drawer-img" src="../assets/cuisine_default.png" alt="Cuisine Name">
+                    </picture>
                 </div>
 
                 <div class="drawer-section">
@@ -311,8 +332,8 @@
     <script type="module" src="../firebase-config.js"></script>
     <script type="module" src="../auth.js"></script>
     <script src="../router.js" defer></script>
-  <script src="../js-modules/compare-drawer/compare-drawer.js"></script>
-  <script src="../js-modules/page-progress/page-progress.js"></script>
+    <script src="../js-modules/compare-drawer/compare-drawer.js"></script>
+    <script src="../js-modules/page-progress/page-progress.js"></script>
 </body>
 
 </html>

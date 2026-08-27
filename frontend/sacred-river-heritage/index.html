@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore India's Sacred River Heritage - Major rivers, religious traditions, pilgrimage locations, ghats, festivals, and cultural practices.">
+    <title>Sacred River Heritage | Incredible India Explorer</title>
+
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="../../assets/fonts/Outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/Outfit-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/PlayfairDisplay-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sticky Navbar -->
+<header class="srh-navbar" id="srhNavbar">
+    <a href="../../index.html" class="back-link">&larr; Back to Home</a>
+    <div class="nav-brand">
+        <span class="saffron">Incredible</span>
+        <span class="gold">India</span>
+        <span class="green">Explorer</span>
+    </div>
+    <nav class="srh-nav-links">
+        <a href="#rivers">Rivers</a>
+        <a href="#map-section">Map</a>
+        <a href="#ghats">Ghats</a>
+        <a href="#festivals">Festivals</a>
+        <a href="#traditions">Traditions</a>
+    </nav>
+</header>
+
+<!-- Hero Section with Parallax -->
+<section class="srh-hero" id="srhHero">
+    <div class="srh-hero-bg">
+        <div class="srh-water-particles" id="waterParticles"></div>
+    </div>
+    <div class="srh-hero-overlay"></div>
+    <div class="srh-hero-content">
+        <span class="srh-section-badge">🛕 Sacred Waters</span>
+        <h1 class="srh-hero-title">India's Sacred<br>River Heritage</h1>
+        <p class="srh-hero-subtitle">
+            Journey along the holy rivers that have shaped Indian civilization for millennia — 
+            from the glacial springs of Gangotri to the sacred confluence at Prayagraj.
+        </p>
+        <div class="srh-hero-stats">
+            <div class="srh-stat-item">
+                <span class="srh-stat-number">7</span>
+                <span class="srh-stat-label">Sacred Rivers</span>
+            </div>
+            <div class="srh-stat-item">
+                <span class="srh-stat-number">100+</span>
+                <span class="srh-stat-label">Holy Ghats</span>
+            </div>
+            <div class="srh-stat-item">
+                <span class="srh-stat-number">50+</span>
+                <span class="srh-stat-label">Pilgrimage Sites</span>
+            </div>
+            <div class="srh-stat-item">
+                <span class="srh-stat-number">5000+</span>
+                <span class="srh-stat-label">Years of Heritage</span>
+            </div>
+        </div>
+        <a href="#rivers" class="srh-cta-btn">Explore Sacred Rivers ↓</a>
+    </div>
+    <div class="srh-scroll-indicator">
+        <div class="srh-scroll-mouse">
+            <div class="srh-scroll-wheel"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Rivers Overview Section -->
+<section class="srh-section" id="rivers">
+    <div class="srh-container">
+        <div class="srh-section-header">
+            <span class="srh-section-badge">🌊 The Holy Seven</span>
+            <h2>Sacred Rivers of India</h2>
+            <p class="srh-section-subtitle">
+                The seven sacred rivers (Sapta Sindhu) hold profound spiritual significance in Hindu tradition, 
+                each embodying divine qualities and nurturing millions of lives along their banks.
+            </p>
+        </div>
+
+        <!-- River Filter Tabs -->
+        <div class="srh-filter-tabs" id="riverFilterTabs">
+            <button class="srh-filter-btn active" data-filter="all">All Rivers</button>
+            <button class="srh-filter-btn" data-filter="north">Northern</button>
+            <button class="srh-filter-btn" data-filter="central">Central</button>
+            <button class="srh-filter-btn" data-filter="eastern">Eastern</button>
+            <button class="srh-filter-btn" data-filter="peninsular">Peninsular</button>
+        </div>
+
+        <!-- River Cards Grid -->
+        <div class="srh-river-grid" id="riverGrid">
+            <!-- Injected by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Map Section -->
+<section class="srh-section srh-dark-section" id="map-section">
+    <div class="srh-container">
+        <div class="srh-section-header">
+            <span class="srh-section-badge">🗺️ Interactive Map</span>
+            <h2>Sacred Rivers Across India</h2>
+            <p class="srh-section-subtitle">
+                Click on any river marker to explore its route, sacred sites, and cultural significance.
+            </p>
+        </div>
+
+        <div class="srh-map-wrapper">
+            <div class="srh-map-container" id="srhMapContainer">
+                <svg id="srhMapSvg" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- India outline simplified -->
+                    <path class="srh-india-outline" d="M200,80 L280,50 L350,60 L420,40 L500,55 L560,80 L600,120 L620,180 L640,240 L660,300 L650,360 L630,400 L600,440 L570,470 L540,500 L500,530 L460,550 L420,570 L380,580 L340,560 L300,540 L260,500 L230,460 L210,420 L190,380 L170,340 L160,280 L170,220 L180,160 L190,120 Z" fill="none" stroke="var(--border-subtle)" stroke-width="1.5"/>
+                    <!-- River paths injected by JS -->
+                    <g id="srhRiverPaths"></g>
+                    <!-- River markers injected by JS -->
+                    <g id="srhRiverMarkers"></g>
+                </svg>
+
+                <!-- Map Legend -->
+                <div class="srh-map-legend" id="srhMapLegend">
+                    <h4>River Legend</h4>
+                    <div class="srh-legend-items" id="srhLegendItems">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Info Panel -->
+            <div class="srh-map-info-panel" id="srhMapInfoPanel">
+                <div class="srh-map-info-default">
+                    <div class="srh-map-info-icon">🕉️</div>
+                    <h3>Explore Sacred Rivers</h3>
+                    <p>Click on a river marker or card to see detailed information about its sacred sites, festivals, and cultural significance.</p>
+                </div>
+                <div class="srh-map-info-content" id="srhMapInfoContent" style="display:none;">
+                    <button class="srh-info-close" id="srhInfoClose">&times;</button>
+                    <div class="srh-info-river-icon" id="srhInfoIcon">🏞️</div>
+                    <span class="srh-info-tag" id="srhInfoTag">Sacred River</span>
+                    <h3 id="srhInfoName">River Name</h3>
+                    <p class="srh-info-desc" id="srhInfoDesc">Description</p>
+
+                    <div class="srh-info-section">
+                        <h4>📍 Origin</h4>
+                        <p id="srhInfoOrigin">—</p>
+                    </div>
+                    <div class="srh-info-section">
+                        <h4>🕉️ Religious Significance</h4>
+                        <p id="srhInfoReligion">—</p>
+                    </div>
+                    <div class="srh-info-section">
+                        <h4>🏛️ Key Pilgrimage Sites</h4>
+                        <div class="srh-info-tags" id="srhInfoSites"></div>
+                    </div>
+                    <div class="srh-info-section">
+                        <h4>🎉 Festivals</h4>
+                        <div class="srh-info-tags" id="srhInfoFestivals"></div>
+                    </div>
+                    <div class="srh-info-section">
+                        <h4>📜 Historical Reference</h4>
+                        <p id="srhInfoHistory">—</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ghats Section -->
+<section class="srh-section" id="ghats">
+    <div class="srh-container">
+        <div class="srh-section-header">
+            <span class="srh-section-badge">🏛️ Sacred Steps</span>
+            <h2>Famous Ghats of India</h2>
+            <p class="srh-section-subtitle">
+                Ghats are series of steps leading down to a river — sacred spaces where life, death, 
+                worship, and daily rituals converge.
+            </p>
+        </div>
+
+        <!-- Ghat City Filter -->
+        <div class="srh-filter-tabs" id="ghatFilterTabs">
+            <button class="srh-filter-btn active" data-filter="all">All Cities</button>
+            <button class="srh-filter-btn" data-filter="varanasi">Varanasi</button>
+            <button class="srh-filter-btn" data-filter="haridwar">Haridwar</button>
+            <button class="srh-filter-btn" data-filter="rishikesh">Rishikesh</button>
+            <button class="srh-filter-btn" data-filter="prayagraj">Prayagraj</button>
+            <button class="srh-filter-btn" data-filter="kolkata">Kolkata</button>
+        </div>
+
+        <div class="srh-ghat-grid" id="ghatGrid">
+            <!-- Injected by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Festivals Section -->
+<section class="srh-section srh-dark-section" id="festivals">
+    <div class="srh-container">
+        <div class="srh-section-header">
+            <span class="srh-section-badge">🎉 River Festivals</span>
+            <h2>Festivals on Sacred Waters</h2>
+            <p class="srh-section-subtitle">
+                Millions gather at the riverbanks during auspicious festivals to bathe, pray, 
+                and celebrate the divine connection between water and spiritual liberation.
+            </p>
+        </div>
+
+        <div class="srh-festival-timeline" id="festivalTimeline">
+            <!-- Injected by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Cultural Traditions Section -->
+<section class="srh-section" id="traditions">
+    <div class="srh-container">
+        <div class="srh-section-header">
+            <span class="srh-section-badge">🙏 Living Traditions</span>
+            <h2>Cultural & Religious Practices</h2>
+            <p class="srh-section-subtitle">
+                Ancient rituals performed along sacred riverbanks have been passed down through 
+                generations, forming the spiritual backbone of Indian culture.
+            </p>
+        </div>
+
+        <div class="srh-traditions-grid" id="traditionsGrid">
+            <!-- Injected by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Historical References Section -->
+<section class="srh-section srh-dark-section" id="history">
+    <div class="srh-container">
+        <div class="srh-section-header">
+            <span class="srh-section-badge">📜 Ancient Texts</span>
+            <h2>Rivers in Sacred Literature</h2>
+            <p class="srh-section-subtitle">
+                From the Rigveda to the Puranas, India's sacred rivers have been woven into 
+                the very fabric of its spiritual and literary heritage.
+            </p>
+        </div>
+
+        <div class="srh-history-cards" id="historyCards">
+            <!-- Injected by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="srh-footer">
+    <div class="srh-footer-content">
+        <div class="srh-footer-brand">
+            <span class="saffron">Incredible</span>
+            <span class="gold">India</span>
+            <span class="green">Explorer</span>
+        </div>
+        <p class="srh-footer-text">
+            Explore India's sacred river heritage — a journey through millennia of faith, culture, and spiritual devotion.
+        </p>
+        <p class="srh-footer-copy">&copy; 2026 Incredible India Explorer. Sacred River Heritage.</p>
+    </div>
+</footer>
+
+<!-- River Detail Modal -->
+<div class="srh-modal-overlay" id="srhModalOverlay">
+    <div class="srh-modal" role="dialog" aria-modal="true" id="srhModal">
+        <button class="srh-modal-close" id="srhModalClose" aria-label="Close">&times;</button>
+        <div class="srh-modal-icon" id="srhModalIcon">🏞️</div>
+        <span class="srh-modal-tag" id="srhModalTag">Sacred River</span>
+        <h2 class="srh-modal-title" id="srhModalTitle">River Name</h2>
+        <p class="srh-modal-intro" id="srhModalIntro">Introduction text</p>
+
+        <div class="srh-modal-grid">
+            <div class="srh-modal-card">
+                <h4>🕉️ Deity Association</h4>
+                <p id="srhModalDeity">—</p>
+            </div>
+            <div class="srh-modal-card">
+                <h4>📍 Length & Journey</h4>
+                <p id="srhModalLength">—</p>
+            </div>
+            <div class="srh-modal-card">
+                <h4>🏛️ Sacred Ghats</h4>
+                <p id="srhModalGhats">—</p>
+            </div>
+            <div class="srh-modal-card">
+                <h4>🎉 Key Festival</h4>
+                <p id="srhModalFestival">—</p>
+            </div>
+        </div>
+
+        <div class="srh-modal-section">
+            <h4>📜 Historical Reference</h4>
+            <p id="srhModalHistory">—</p>
+        </div>
+
+        <div class="srh-modal-section">
+            <h4>🙏 Rituals & Practices</h4>
+            <p id="srhModalRituals">—</p>
+        </div>
+
+        <div class="srh-modal-section">
+            <h4>🌿 Cultural Significance</h4>
+            <p id="srhModalCulture">—</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

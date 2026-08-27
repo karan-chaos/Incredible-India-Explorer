@@ -4,143 +4,270 @@
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
-            if (theme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
+            document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Language Diversity Map | Animated Reveal</title>
-  <meta name="description" content="Animated map progressively revealing India's linguistic diversity across 3 layers based on Census of India language speaker data.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Explore India's linguistic diversity through an interactive, animated map revealing major languages and speaker populations based on Census of India 2011 data.">
+  <meta name="keywords" content="India languages, linguistic diversity, Census of India 2011, Hindi, Bengali, Tamil, interactive map, data visualization">
+  <meta name="author" content="Incredible India Explorer">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph / Social Media Tags -->
+  <meta property="og:title" content="Language Diversity Map | Animated Reveal">
+  <meta property="og:description" content="Explore India's linguistic diversity through an interactive, animated map revealing major languages and speaker populations.">
+  <meta property="og:image" content="https://incredibleindiaexplorer.gov.in/frontend/assets/language-map-og.png">
+  <meta property="og:url" content="https://incredibleindiaexplorer.gov.in/frontend/language-diversity-map/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Incredible India Explorer">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Language Diversity Map | Animated Reveal">
+  <meta name="twitter:description" content="Explore India's linguistic diversity through an interactive, animated map.">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://incredibleindiaexplorer.gov.in/frontend/language-diversity-map/index.html">
+
+  <title>Language Diversity Map | Animated Reveal | Incredible India</title>
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../pages-common.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Skip to Content for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="app-header">
-    <a href="../../index.html" class="back-link" aria-label="Return to Incredible India Explorer Home">
-      <i class="fas fa-arrow-left"></i> Back to Explorer
-    </a>
-    <h1 class="page-title">Language Diversity Map</h1>
-    <div class="header-badge">Census Data Viz</div>
+    <div class="header-container">
+      <a href="../../index.html" class="back-link" aria-label="Return to Incredible India Explorer Home">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Explorer
+      </a>
+      <div class="header-center">
+        <h1 class="page-title">Language Diversity Map</h1>
+        <span class="header-badge">Census Data Viz</span>
+      </div>
+      <div class="header-spacer"></div> <!-- For flex alignment -->
+    </div>
   </header>
 
-  <main class="container">
-    <section class="hero-section">
-      <h1>India's Linguistic Landscape</h1>
-      <p>With over 121 major languages and 19,500 dialects, India is a global epicenter of linguistic diversity. Scroll or click layers to progressively reveal major languages by speaker population (Source: Census of India 2011).</p>
+  <main id="main-content" class="container">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-list">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../culture/culture.html">Culture</a></li>
+        <li aria-current="page">Language Diversity Map</li>
+      </ol>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">India's Linguistic Landscape</h1>
+      <p class="hero-subtitle">With over 121 major languages and 19,500 dialects, India is a global epicenter of linguistic diversity. Scroll or click layers to progressively reveal major languages by speaker population.</p>
+      <div class="hero-meta">
+        <span><i class="fas fa-database" aria-hidden="true"></i> Source: Census of India 2011</span>
+        <span><i class="fas fa-users" aria-hidden="true"></i> Data represents native speakers</span>
+      </div>
     </section>
 
     <!-- Layer Stepper Nav -->
-    <nav class="layer-stepper-nav" id="layer-stepper-nav" aria-label="Layer Reveal Selector">
-      <!-- Rendered via JS -->
+    <nav class="layer-stepper-nav" id="layer-stepper-nav" aria-label="Map Layer Selection">
+      <!-- Rendered via JS, but structured for a11y -->
     </nav>
 
     <!-- Main Display Grid -->
     <div class="lang-display-grid">
+      
       <!-- SVG Map Display -->
-      <section class="map-card" aria-label="Linguistic Map Visualization Stage">
-        <h3><i class="fas fa-language"></i> Progressive Diversity Map</h3>
-        <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem;">Map layers reveal language density and speaker distributions as you advance.</p>
+      <section class="map-card" aria-labelledby="map-heading">
+        <h2 id="map-heading"><i class="fas fa-language" aria-hidden="true"></i> Progressive Diversity Map</h2>
+        <p class="map-instruction">Hover over or click the markers to see details. Advance layers to reveal more linguistic diversity.</p>
 
-        <div class="map-container">
-          <svg class="lang-map-svg" viewBox="0 0 700 600" aria-label="SVG India Language Map">
+        <div class="map-container" role="region" aria-label="Interactive SVG Map of India's Languages">
+          <!-- Tooltip for interactive elements -->
+          <div id="map-tooltip" class="map-tooltip" role="tooltip" hidden></div>
+
+          <svg class="lang-map-svg" viewBox="0 0 700 600" aria-labelledby="map-title map-desc">
+            <title id="map-title">Interactive Map of Major Indian Languages</title>
+            <desc id="map-desc">A stylized map of India showing the geographic distribution of major languages. Use the layer controls to reveal more languages.</desc>
+            
             <defs>
               <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="4" result="blur" />
                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
               </filter>
+              <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
             </defs>
 
-            <!-- Base India Silhouette -->
-            <path fill="#1e293b" stroke="#475569" stroke-width="1.5" d="M 220 70 L 300 80 L 400 130 L 500 150 L 530 180 L 610 200 L 630 260 L 550 280 L 400 240 L 320 220 L 260 250 L 220 310 L 240 430 L 210 440 L 175 320 L 160 250 L 180 180 Z" />
+            <!-- Base India Silhouette (Simplified for demo, replace with actual GeoJSON path in production) -->
+            <path class="india-base" fill="#1e293b" stroke="#475569" stroke-width="1.5" d="M 220 70 L 300 80 L 400 130 L 500 150 L 530 180 L 610 200 L 630 260 L 550 280 L 400 240 L 320 220 L 260 250 L 220 310 L 240 430 L 210 440 L 175 320 L 160 250 L 180 180 Z" />
 
-            <!-- Layer 1 Language Overlays -->
-            <g class="map-lang-overlay" data-layer="1">
-              <!-- Hindi (North/Central) -->
-              <circle cx="320" cy="180" r="45" fill="#38bdf844" stroke="#38bdf8" stroke-width="2" filter="url(#glow-blue)" />
-              <text x="320" y="184" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Hindi (528M)</text>
+            <!-- Layer 1: Top 5 National Languages -->
+            <g class="map-lang-overlay" data-layer="1" aria-label="Layer 1: Top 5 Languages">
+              <circle class="lang-marker" cx="320" cy="180" r="45" fill="#38bdf844" stroke="#38bdf8" stroke-width="2" filter="url(#glow-blue)" 
+                      data-lang="Hindi" data-speakers="528M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Hindi, 528 Million speakers, Indo-Aryan family" />
+              <text x="320" y="184" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" pointer-events="none">Hindi (528M)</text>
 
-              <!-- Bengali (East) -->
-              <circle cx="500" cy="240" r="30" fill="#4ade8044" stroke="#4ade80" stroke-width="2" />
-              <text x="500" y="244" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Bengali (97M)</text>
+              <circle class="lang-marker" cx="500" cy="240" r="30" fill="#4ade8044" stroke="#4ade80" stroke-width="2" filter="url(#glow-green)"
+                      data-lang="Bengali" data-speakers="97M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Bengali, 97 Million speakers, Indo-Aryan family" />
+              <text x="500" y="244" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" pointer-events="none">Bengali (97M)</text>
 
-              <!-- Marathi (West) -->
-              <circle cx="260" cy="300" r="32" fill="#facc1544" stroke="#facc15" stroke-width="2" />
-              <text x="260" y="304" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Marathi (83M)</text>
+              <circle class="lang-marker" cx="260" cy="300" r="32" fill="#facc1544" stroke="#facc15" stroke-width="2"
+                      data-lang="Marathi" data-speakers="83M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Marathi, 83 Million speakers, Indo-Aryan family" />
+              <text x="260" y="304" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" pointer-events="none">Marathi (83M)</text>
 
-              <!-- Telugu (South-Central) -->
-              <circle cx="300" cy="370" r="30" fill="#e879f944" stroke="#e879f9" stroke-width="2" />
-              <text x="300" y="374" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Telugu (81M)</text>
+              <circle class="lang-marker" cx="300" cy="370" r="30" fill="#e879f944" stroke="#e879f9" stroke-width="2"
+                      data-lang="Telugu" data-speakers="81M" data-family="Dravidian" tabindex="0" role="button" aria-label="Telugu, 81 Million speakers, Dravidian family" />
+              <text x="300" y="374" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" pointer-events="none">Telugu (81M)</text>
 
-              <!-- Tamil (South) -->
-              <circle cx="260" cy="450" r="28" fill="#f8717144" stroke="#f87171" stroke-width="2" />
-              <text x="260" y="454" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Tamil (69M)</text>
+              <circle class="lang-marker" cx="260" cy="450" r="28" fill="#f8717144" stroke="#f87171" stroke-width="2"
+                      data-lang="Tamil" data-speakers="69M" data-family="Dravidian" tabindex="0" role="button" aria-label="Tamil, 69 Million speakers, Dravidian family" />
+              <text x="260" y="454" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" pointer-events="none">Tamil (69M)</text>
             </g>
 
-            <!-- Layer 2 Language Overlays -->
-            <g class="map-lang-overlay" data-layer="2" style="opacity: 0;">
-              <!-- Gujarati -->
-              <circle cx="200" cy="250" r="22" fill="#fb923c44" stroke="#fb923c" stroke-width="2" />
-              <text x="200" y="253" text-anchor="middle" fill="#ffffff" font-size="9">Gujarati</text>
+            <!-- Layer 2: Major Regional Languages -->
+            <g class="map-lang-overlay" data-layer="2" aria-label="Layer 2: Major Regional Languages" style="opacity: 0; pointer-events: none;">
+              <circle class="lang-marker" cx="200" cy="250" r="22" fill="#fb923c44" stroke="#fb923c" stroke-width="2"
+                      data-lang="Gujarati" data-speakers="55M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Gujarati, 55 Million speakers" />
+              <text x="200" y="253" text-anchor="middle" fill="#ffffff" font-size="9" pointer-events="none">Gujarati</text>
 
-              <!-- Kannada -->
-              <circle cx="240" cy="390" r="24" fill="#34d39944" stroke="#34d399" stroke-width="2" />
-              <text x="240" y="393" text-anchor="middle" fill="#ffffff" font-size="9">Kannada</text>
+              <circle class="lang-marker" cx="240" cy="390" r="24" fill="#34d39944" stroke="#34d399" stroke-width="2"
+                      data-lang="Kannada" data-speakers="43M" data-family="Dravidian" tabindex="0" role="button" aria-label="Kannada, 43 Million speakers" />
+              <text x="240" y="393" text-anchor="middle" fill="#ffffff" font-size="9" pointer-events="none">Kannada</text>
 
-              <!-- Odia -->
-              <circle cx="420" cy="290" r="22" fill="#60a5fa44" stroke="#60a5fa" stroke-width="2" />
-              <text x="420" y="293" text-anchor="middle" fill="#ffffff" font-size="9">Odia</text>
+              <circle class="lang-marker" cx="420" cy="290" r="22" fill="#60a5fa44" stroke="#60a5fa" stroke-width="2"
+                      data-lang="Odia" data-speakers="37M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Odia, 37 Million speakers" />
+              <text x="420" y="293" text-anchor="middle" fill="#ffffff" font-size="9" pointer-events="none">Odia</text>
 
-              <!-- Malayalam -->
-              <circle cx="220" cy="460" r="20" fill="#c084fc44" stroke="#c084fc" stroke-width="2" />
-              <text x="220" y="463" text-anchor="middle" fill="#ffffff" font-size="9">Malayalam</text>
+              <circle class="lang-marker" cx="220" cy="460" r="20" fill="#c084fc44" stroke="#c084fc" stroke-width="2"
+                      data-lang="Malayalam" data-speakers="34M" data-family="Dravidian" tabindex="0" role="button" aria-label="Malayalam, 34 Million speakers" />
+              <text x="220" y="463" text-anchor="middle" fill="#ffffff" font-size="9" pointer-events="none">Malayalam</text>
 
-              <!-- Punjabi -->
-              <circle cx="260" cy="130" r="20" fill="#f43f5e44" stroke="#f43f5e" stroke-width="2" />
-              <text x="260" y="133" text-anchor="middle" fill="#ffffff" font-size="9">Punjabi</text>
+              <circle class="lang-marker" cx="260" cy="130" r="20" fill="#f43f5e44" stroke="#f43f5e" stroke-width="2"
+                      data-lang="Punjabi" data-speakers="33M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Punjabi, 33 Million speakers" />
+              <text x="260" y="133" text-anchor="middle" fill="#ffffff" font-size="9" pointer-events="none">Punjabi</text>
 
-              <!-- Assamese -->
-              <circle cx="560" cy="210" r="18" fill="#818cf844" stroke="#818cf8" stroke-width="2" />
-              <text x="560" y="213" text-anchor="middle" fill="#ffffff" font-size="9">Assamese</text>
+              <circle class="lang-marker" cx="560" cy="210" r="18" fill="#818cf844" stroke="#818cf8" stroke-width="2"
+                      data-lang="Assamese" data-speakers="15M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Assamese, 15 Million speakers" />
+              <text x="560" y="213" text-anchor="middle" fill="#ffffff" font-size="9" pointer-events="none">Assamese</text>
             </g>
 
-            <!-- Layer 3 Language Overlays -->
-            <g class="map-lang-overlay" data-layer="3" style="opacity: 0;">
-              <!-- Kashmiri -->
-              <circle cx="220" cy="90" r="15" fill="#38bdf855" stroke="#38bdf8" stroke-width="1.5" />
-              <!-- Manipuri -->
-              <circle cx="590" cy="250" r="14" fill="#8b5cf655" stroke="#8b5cf6" stroke-width="1.5" />
-              <!-- Santali -->
-              <circle cx="450" cy="260" r="16" fill="#eab30855" stroke="#eab308" stroke-width="1.5" />
-              <!-- Konkani -->
-              <circle cx="200" cy="350" r="12" fill="#22c55e55" stroke="#22c55e" stroke-width="1.5" />
+            <!-- Layer 3: Diverse Linguistic Pockets -->
+            <g class="map-lang-overlay" data-layer="3" aria-label="Layer 3: Diverse Linguistic Pockets" style="opacity: 0; pointer-events: none;">
+              <circle class="lang-marker" cx="220" cy="90" r="15" fill="#38bdf855" stroke="#38bdf8" stroke-width="1.5"
+                      data-lang="Kashmiri" data-speakers="6.8M" data-family="Dardic" tabindex="0" role="button" aria-label="Kashmiri, 6.8 Million speakers" />
+              
+              <circle class="lang-marker" cx="590" cy="250" r="14" fill="#8b5cf655" stroke="#8b5cf6" stroke-width="1.5"
+                      data-lang="Manipuri" data-speakers="1.8M" data-family="Sino-Tibetan" tabindex="0" role="button" aria-label="Manipuri, 1.8 Million speakers" />
+              
+              <circle class="lang-marker" cx="450" cy="260" r="16" fill="#eab30855" stroke="#eab308" stroke-width="1.5"
+                      data-lang="Santali" data-speakers="7.3M" data-family="Austroasiatic" tabindex="0" role="button" aria-label="Santali, 7.3 Million speakers" />
+              
+              <circle class="lang-marker" cx="200" cy="350" r="12" fill="#22c55e55" stroke="#22c55e" stroke-width="1.5"
+                      data-lang="Konkani" data-speakers="2.5M" data-family="Indo-Aryan" tabindex="0" role="button" aria-label="Konkani, 2.5 Million speakers" />
             </g>
           </svg>
+        </div>
+
+        <!-- Map Legend -->
+        <div class="map-legend" aria-label="Map Color Legend">
+          <h3>Language Families</h3>
+          <ul class="legend-list">
+            <li><span class="legend-dot" style="background: #38bdf8;"></span> Indo-Aryan</li>
+            <li><span class="legend-dot" style="background: #e879f9;"></span> Dravidian</li>
+            <li><span class="legend-dot" style="background: #8b5cf6;"></span> Sino-Tibetan</li>
+            <li><span class="legend-dot" style="background: #eab308;"></span> Austroasiatic</li>
+          </ul>
         </div>
       </section>
 
       <!-- Language Cards & Detail Stage -->
-      <section class="lang-detail-card" aria-label="Language Details and Speaker Statistics">
+      <section class="lang-detail-card" aria-labelledby="detail-heading" aria-live="polite">
         <div class="layer-title-wrap">
-          <h2 class="layer-title" id="active-layer-title">Layer 1: Top 5 National Languages</h2>
-          <span class="accumulated-badge" id="accumulated-count">5 Languages Revealed</span>
+          <h2 class="layer-title" id="detail-heading">Layer 1: Top 5 National Languages</h2>
+          <span class="accumulated-badge" id="accumulated-count" aria-live="polite">5 Languages Revealed</span>
         </div>
         <p class="layer-desc" id="active-layer-desc">Covers the top 5 most spoken scheduled languages of India, accounting for over 65% of the total population.</p>
 
-        <div class="language-cards-grid" id="language-cards-grid">
+        <!-- Dynamic Cards Grid -->
+        <div class="language-cards-grid" id="language-cards-grid" role="list">
           <!-- Rendered via JS -->
+          <div class="skeleton-card" aria-hidden="true">
+            <div class="skeleton-line short"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
         </div>
 
         <div class="layer-controls">
-          <button class="btn-layer-nav" id="prev-layer-btn" aria-label="Previous Layer"><i class="fas fa-chevron-left"></i> Previous Layer</button>
-          <button class="btn-layer-nav" id="next-layer-btn" aria-label="Next Layer">Next Layer <i class="fas fa-chevron-right"></i></button>
+          <button class="btn-layer-nav" id="prev-layer-btn" aria-label="Go to previous map layer" disabled>
+            <i class="fas fa-chevron-left" aria-hidden="true"></i> Previous
+          </button>
+          <div class="layer-progress" aria-hidden="true">
+            <span class="progress-dot active"></span>
+            <span class="progress-dot"></span>
+            <span class="progress-dot"></span>
+          </div>
+          <button class="btn-layer-nav btn-primary" id="next-layer-btn" aria-label="Go to next map layer">
+            Next <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
       </section>
     </div>
+
+    <!-- About the Data Section -->
+    <section class="data-source-section" aria-labelledby="data-heading">
+      <div class="data-container">
+        <h2 id="data-heading"><i class="fas fa-info-circle" aria-hidden="true"></i> About the Data</h2>
+        <p>The speaker population figures and language families presented in this visualization are derived from the <strong>Census of India 2011</strong>, the most recent comprehensive linguistic survey conducted by the Government of India. Languages are grouped by their primary linguistic family (e.g., Indo-Aryan, Dravidian). Note that "Hindi" in this context includes related dialects counted under the Hindi umbrella in the census.</p>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Incredible India Explorer</h3>
+        <p>Celebrating the rich cultural and linguistic tapestry of India.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore More</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../culture/culture.html">Cultural Heritage</a></li>
+          <li><a href="../historical-timeline/index.html">Historical Timeline</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://censusindia.gov.in" target="_blank" rel="noopener noreferrer">Census of India <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+          <li><a href="../../privacy.html">Privacy Policy</a></li>
+          <li><a href="../../terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Incredible India Explorer. All rights reserved. Data sourced from Census of India 2011.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script type="module" src="script.js"></script>
 </body>
 </html>

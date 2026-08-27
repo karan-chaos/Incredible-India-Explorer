@@ -1,0 +1,351 @@
+:root {
+    --land-primary: #92400e;
+    --land-accent: #d97706;
+    --land-hero: #fefce8;
+    --land-card: #ffffff;
+    --land-text: #334155;
+    --land-heading: #1e293b;
+    --land-border: #e2e8f0;
+}
+
+body:not(.light-theme) {
+    --land-primary: #fbbf24;
+    --land-accent: #f59e0b;
+    --land-hero: #292524;
+    --land-card: #1e293b;
+    --land-text: #cbd5e1;
+    --land-heading: #f8fafc;
+    --land-border: #475569;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-section {
+    margin-bottom: 4rem;
+    padding: 4rem 2rem;
+    border: 2px solid var(--land-accent);
+    border-radius: 16px;
+    background: var(--land-hero);
+    text-align: center;
+}
+
+.site-badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: var(--land-accent);
+    color: #111;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    margin: 0 0 1rem;
+    color: var(--land-primary);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+    color: var(--land-heading);
+    font-size: 1.35rem;
+}
+
+.location {
+    margin-bottom: 1.5rem;
+    color: var(--land-text);
+    font-style: italic;
+}
+
+.hero-desc {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--land-text);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.overview-card {
+    padding: 1.7rem;
+    border: 1px solid var(--land-border);
+    border-radius: 12px;
+    background: var(--land-card);
+}
+
+.card-icon {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+.overview-card h2 {
+    margin-bottom: 0.6rem;
+    color: var(--land-heading);
+    font-size: 1.35rem;
+}
+
+.overview-card p {
+    margin: 0;
+    color: var(--land-text);
+    line-height: 1.6;
+}
+
+.content-section,
+.environment-section,
+.timeline-section,
+.significance-section,
+.map-section {
+    margin-bottom: 4rem;
+}
+
+.section-heading {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-heading span {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--land-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.section-heading h2 {
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--land-accent);
+    color: var(--land-primary);
+    font-size: 2.2rem;
+}
+
+.content-card {
+    padding: 2rem;
+    border: 1px solid var(--land-border);
+    border-radius: 12px;
+    background: var(--land-card);
+    color: var(--land-text);
+    line-height: 1.75;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.evidence-card {
+    padding: 1.5rem;
+    border-left: 4px solid var(--land-accent);
+    border-radius: 8px;
+    background: var(--land-card);
+}
+
+.evidence-card h3 {
+    margin-top: 0;
+    color: var(--land-heading);
+}
+
+.evidence-card p {
+    margin-bottom: 0;
+    color: var(--land-text);
+    line-height: 1.6;
+}
+
+.environment-section {
+    padding: 3rem 0;
+}
+
+.environment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.environment-grid article {
+    padding: 2rem;
+    border: 1px solid var(--land-border);
+    border-radius: 12px;
+    background: var(--land-card);
+    text-align: center;
+}
+
+.environment-icon {
+    margin-bottom: 0.75rem;
+    font-size: 2.5rem;
+}
+
+.environment-grid h3 {
+    color: var(--land-heading);
+}
+
+.environment-grid p {
+    margin-bottom: 0;
+    color: var(--land-text);
+    line-height: 1.6;
+}
+
+.timeline {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 1.25rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: var(--land-border);
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--land-accent);
+    color: #111;
+    font-weight: 700;
+}
+
+.timeline-item h3 {
+    margin: 0 0 0.4rem;
+    color: var(--land-heading);
+}
+
+.timeline-item p {
+    margin: 0;
+    color: var(--land-text);
+    line-height: 1.6;
+}
+
+.significance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.significance-card {
+    padding: 1.7rem;
+    border: 1px solid var(--land-border);
+    border-radius: 12px;
+    background: var(--land-card);
+}
+
+.significance-card strong {
+    color: var(--land-accent);
+    font-size: 1.5rem;
+}
+
+.significance-card h3 {
+    color: var(--land-heading);
+}
+
+.significance-card p {
+    margin-bottom: 0;
+    color: var(--land-text);
+    line-height: 1.65;
+}
+
+.map-wrapper {
+    overflow: hidden;
+    border: 1px solid var(--land-border);
+    border-radius: 12px;
+    background: var(--land-card);
+}
+
+.map-caption {
+    margin-top: 0.75rem;
+    color: var(--land-text);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer {
+    padding: 1.5rem 2rem;
+    color: var(--land-text);
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .overview-grid,
+    .environment-grid,
+    .significance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .evidence-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .page-container {
+        padding: 1rem;
+    }
+
+    .overview-grid,
+    .environment-grid,
+    .evidence-grid,
+    .significance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        padding: 3rem 1.25rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .timeline-item {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .timeline-marker {
+        width: 35px;
+        height: 35px;
+    }
+
+    .timeline-item:not(:last-child)::after {
+        left: 17px;
+    }
+
+    .map-wrapper iframe {
+        height: 350px;
+    }
+}
